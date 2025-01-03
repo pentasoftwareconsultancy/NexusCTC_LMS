@@ -1,0 +1,89 @@
+.Footer{
+    background-color: rgb(19, 17, 17);
+    color: rgb(183, 174, 174);
+    height: 80vh;
+    width: 99vw;
+    margin-left: -10px;   
+}
+.content {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr); 
+    gap: 3rem; 
+    padding-top: 80px;
+    padding-left: 180px;
+    padding-right: 180px;
+    
+    
+}
+.text p
+{
+    text-align: left;
+    color: rgb(183, 174, 174); 
+}
+.Onlineplatform ul,.link ul{
+    list-style: none;
+    
+}
+.Onlineplatform li,.link li{
+    padding-bottom: 10px;
+}
+.Onlineplatform h2,.link h2{
+   padding-left: 33px;
+}
+.contacts h2{
+   text-align: left;
+}
+.contacts p{
+    text-align: left;
+    color: rgb(183, 174, 174); 
+}
+.mail input[type="email"] {
+    padding: 10px;
+    width: 50%; 
+    border: none; 
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    margin-top: 10px;
+   
+}
+.mail button {
+    padding: 10px 20px;
+    background-color:orange; 
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 7px;
+}
+
+.mail button:hover {
+    background-color: #e99814; 
+}
+.socialIcons {
+    font-size: 20px; /* Set icon size to 30px, adjust as needed */
+    display: flex; /* Align icons horizontally */
+    gap: 20px; /* Add space between icons */
+    justify-content: flex-start; /* Align icons to the left or center as needed */
+    color: white;
+    margin-top: 20px; /* Space above the icons */
+    list-style: none;
+}
+
+@media (max-width: 1024px) {
+    .Footer{
+        height: 190vh;
+        margin-left: 1px;
+    }
+    .content {
+        margin-top: 200px;
+        grid-template-columns: repeat(1, 1fr); 
+        padding-left: 40px;
+        padding-right: 40px;
+        height: 300px;
+    }
+    .contacts{
+        margin-left: 30px;
+    }
+}

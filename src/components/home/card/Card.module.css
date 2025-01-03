@@ -1,0 +1,149 @@
+/* Card.module.css */
+
+/* Container for the entire card section */
+.card_container {
+    font-family: "Poppins", serif;
+    background-color: white;
+    padding: 50px 0; /* Added padding for some space around the card section */
+    text-align: center; /* Center all content */
+}
+
+/* Heading styling */
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px; /* Reduced padding for better alignment */
+    margin-bottom: 50px; /* Added space below the heading */
+}
+
+.heading div {
+    margin: 10px 0; /* Add space between each div element */
+}
+
+/* First heading (category) style */
+.heading div:nth-child(1) {
+    color: rgb(233, 56, 56); /* Red color */
+    font-size: 1rem;
+}
+
+/* Second heading (Online Classes) style */
+.heading div:nth-child(2) {
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* Third heading (description) style */
+.heading div:nth-child(3) {
+    color: grey;
+    padding: 10px;
+    font-size: 18px;
+}
+
+/* Flexbox layout for the card data section */
+.carddata {
+    display: flex;
+    justify-content: center; /* Center cards horizontally */
+    align-items: stretch; /* Stretch items to the same height */
+    gap: 2rem; /* Space between the cards */
+    padding:20px 100px; /* Added padding for better spacing */
+}
+
+/* Card styling */
+.card {
+    background-color: antiquewhite;
+    text-align: center;
+    padding: 20px 25px; /* Added padding for card content */
+    width: 200px; /* Set a fixed width for the card */
+    border-radius: 10px; /* Added rounded corners for a clean look */
+    height: 350px;
+    justify-content: center;
+    background-color:rgb(253, 250, 209)
+}
+
+/* Styling for card images  */
+.cardImage{
+        
+}
+
+.courses{
+    border-radius: 5px;
+    padding: 5px 5px;
+    width: 100px;
+    margin-left: 40px;
+    
+    
+}
+
+
+/* Heading in the card (h3) styling */
+.card h3 {
+    font-size: 1.5rem;
+    
+}
+
+/* Details text in the card (p) styling */
+.card p {
+    margin-top: 30px;
+    font-size: 15px;
+    
+}
+.div{
+   margin-top: 100px;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    /* Card Data Layout */
+    .carddata {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        gap: 1.5rem; /* Space between items */
+        align-items: center; /* Center align items */
+        justify-content: flex-start; /* Adjust positioning */  
+        
+      
+    }
+
+    /* Card Image */
+    .cardImage {
+        width: 20%; /* Scale the image within the card */
+        height: auto; /* Maintain aspect ratio */
+        max-height: 150px; /* Limit height for mobile */
+        object-fit: cover; /* Make sure image covers its container without distortion */
+        margin-bottom: 10px; /* Add space below the image */
+    }
+
+    /* Card Styling */
+    .card {
+        width: 90%; /* Make the card width responsive */
+        height: 50%; /* Allow height to adjust based on content */
+        max-width: 350px; /* Limit the maximum width */
+        padding: 15px 20px; /* Adjust padding */
+        
+    }
+
+    /* Heading Adjustments */
+    .heading {
+        margin-top: 40%; /* Adjust top margin */
+        text-align: center; /* Ensure the text is centered */
+    }
+
+    .heading div:nth-child(1) {
+        font-size: 4vw; /* Scale font size based on viewport width */
+    }
+
+    .heading div:nth-child(2) {
+        font-size: 6vw; /* Adjust font size for the second heading */
+        margin-top: -10px;
+    }
+
+    .heading div:nth-child(3) {
+        font-size: 15px;
+        margin-top: -10px;
+    }
+}
+

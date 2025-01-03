@@ -1,0 +1,40 @@
+.video{
+    margin-top: 20%;
+    background-color: white;
+}
+/*for videocontaine*/
+.videoshape{
+     margin-top: -15%;
+     margin-left: 10%;
+    
+    
+}
+.videoEmbed{
+    position: absolute;
+    transform: translate(48%, -110%);  /* Center the image */
+    max-width: 80%;  /* Adjust size */
+    z-index: 2;  /* Ensure it appears above the shape */
+}
+/*video */
+.videoPlayer{
+    width: 140%;
+    border-top-right-radius: 15%;
+    border-bottom-left-radius: 10%;
+}
+  
+  /* For mobile devices */
+  @media screen and (max-width: 768px) {
+    .videoshape{
+        display: none;
+    }
+    .videoEmbed{
+        width:62%;
+    }
+    .videoContainer{
+      margin-top: 300px;
+        margin-left: -100px;
+        
+    }
+  }
+  
+  

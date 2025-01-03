@@ -1,0 +1,161 @@
+.News{
+    background-color: white;
+    background-image: url("../../../assets/background.svg"); /* Specify the path to your image */
+    background-size: cover; /* Ensure the background image covers the entire container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+   
+}   
+
+.news_container{
+    display: flex; /* Use flexbox for centering the content */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    height: 100vh; /* Make the container take up the full viewport height */
+    width: 100%; /* Ensure the container takes up the full width */
+    gap: 1rem;
+    margin-top: -180px;
+   
+}
+
+/*For details*/
+.news_details{
+    background-color: white;
+    position: absolute; 
+    transform: translate(5%, -50%);  
+    width: 20%;
+    z-index: 2;  
+    border-radius: 10px;
+    padding-left: 30px;
+    box-shadow: 0px 0px 12px;
+    cursor: pointer;
+    
+}
+img {
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out, filter 0.3s ease-in-out; /* Smooth transition for zoom, opacity, and filter */
+}
+
+.content:hover .image{
+    transform: scale(1.05); /* Scale the image on hover */
+    opacity: 0.5; /* Make the image semi-transparent */
+    filter: brightness(0.9); /* Darken the image by reducing brightness to 30% */
+    transition-duration: 1s; /* Ensure smooth transition */
+    color: grey;
+}
+
+/* Optional: Add zoom effect on click */
+.image:active {
+    transform: scale(0.95); /* Zoom out on click */
+    transition: transform 0.2s ease-in-out; /* Smooth transition for zoom-out */
+}
+
+.article,p{
+    text-align: center;
+}
+.article{
+    padding-top: 0px;
+    margin-bottom: -30px;
+    color: grey;
+}
+.p{
+    
+    font-size: 40px;
+    color: black;
+}
+.text,.date,.heading,.mode{
+    padding:6px;
+}
+.mode,.text{
+    color: grey;
+}
+.heading{
+    color: black;
+    font-size:17px;
+    font-weight: bold;
+}
+.date{
+    display: flex;
+    gap: 3rem;
+}
+p{
+    color: black; 
+}
+
+@media (max-width: 1024px) {
+    .news_container {
+        margin-top: 0; /* Remove top margin */
+        gap: 2rem; /* Increase gap between elements */
+        flex-direction: column; /* Stack elements vertically */
+        height: auto; /* Adjust height */
+    }
+
+    .news_details {
+        width: 40%; /* Adjust width for smaller screens */
+        padding-left: 20px; /* Less padding */
+    }
+
+    .p {
+        font-size: 30px; /* Smaller font size for heading */
+    }
+
+    .heading {
+        font-size: 15px; /* Adjust heading size */
+    }
+
+    .date {
+        flex-direction: column; /* Stack date items vertically */
+        gap: 1rem; /* Increase gap */
+    }
+
+    .article {
+        font-size: 14px; /* Smaller font size */
+    }
+}
+
+/* For Mobile Devices (up to 768px) */
+@media (max-width: 768px) {
+    .news_container {
+        flex-direction: column; 
+        gap: 10rem; 
+        height: auto; 
+        margin-top: 0; 
+    }
+
+    .news_details {
+        width: 200%; 
+        transform: translate(-20%, -50%);
+    }
+    .content .news_details{
+        width: 78%;
+        height: 40%;
+        flex-wrap: nowrap;
+        margin-left: 80px;
+    }
+
+    .shape3{
+        display: none;
+    }
+
+    .news_details .date{
+        display:flex;
+        flex-direction: row;
+    }
+    .news_details .heading{
+        font-size: 20px;
+    }
+
+    .News .article {
+        padding-top: 50px;
+        font-size: 15px;
+    }
+    .News .p{
+        font-size: 30px;
+    }
+
+    img {
+        width: 100%; 
+        
+    }
+}

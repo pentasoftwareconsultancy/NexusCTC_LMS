@@ -1,0 +1,213 @@
+.courses_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4%;
+    gap: 2rem;
+}
+.course_card{
+    background-color:white;
+    margin-bottom: 20px;
+    border-radius: 10px; 
+    box-Shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    height: 80%;
+    width: 25%;
+    overflow: hidden;
+   
+}
+.course{
+    margin-top: 150px;
+    color: grey;
+}
+ .name,.course{
+    text-align: center;
+} 
+.name{
+    font-size: 3rem;
+}
+
+.course_card:hover .image {
+    transform: scale(1.1); /* Zooms in the image */
+    transition-duration: 1s;
+}
+
+/* Optional: Add zoom effect on click */
+.course_card:active .image {
+    transform: scale(0.95); /* Zooms out on click */
+    
+}
+.image {
+    width:100%;
+
+}
+
+.course_card h3 {
+    margin-left: 30px; 
+    font-weight: normal;
+    font-size: 15px;
+    background-color: rgb(244, 235, 204);
+    width: 26%;
+    display: flex;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 20px;
+    color: orange;
+    justify-content: center;
+} 
+
+/* .course_card:nth-of-type(2){
+    background-color: aqua;
+
+} */
+
+/* For details */
+.course_card p:nth-of-type(1) {
+    font-size: 20px;
+    color:black; 
+    margin-bottom: 10px;
+    padding-left: 30px;
+    cursor: pointer;
+    text-align: start;
+    font-weight: bold;
+}
+.course_card p:nth-of-type(1):hover{
+    color:orange;
+}
+
+/*For Price */
+  .course_card p:nth-of-type(3) {
+   font-size: 1.2rem; 
+   font-Weight: bold; 
+   color: #e36563;
+   text-align: start;
+   padding-left: 30px;
+}  
+
+.info{
+    display: flex;
+    padding-left: 20px;   
+    gap: 2rem; 
+    padding-bottom: 10px;
+}
+
+/*for students*/
+   .info p:nth-child(2){
+    padding-top: 0px;
+    color: black;
+}  
+/* Button Style */
+.button {
+    display: flex;
+    padding: 15px;
+    font-size: 15px;
+    align-items: center;
+    margin-left: 44%;
+    margin-top: 20px;
+    background-color: orange;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Shine Effect on Hover */
+.button::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(120deg, rgba(254, 252, 247, 0.3), rgba(243, 176, 6, 0.3));
+    transform: rotate(70deg);
+    transition: top 0.3s, left 0.3s;
+}
+
+/* Trigger Shine Effect when Hovered */
+.button:hover::before {
+    top: 100%;
+    left: 100%;
+}
+
+/* Optional: Smooth transition of button background */
+.button:hover {
+    background-color: darkorange; /* Change the background color on hover */
+}
+/*for time*/
+.time{
+    position: absolute;  
+    transform: translate(290%, 20%);  
+    z-index: 2;  
+    background-color:rgb(250, 174, 32);
+    padding: 5px;
+    border-radius: 5px;
+   color: white;
+    
+}
+
+@media screen and (max-width: 768px) {
+    .courses_container {
+      gap: 1rem;
+      flex-direction: column; /* Stack items vertically */
+      align-items: center;
+    }
+    .course_card {
+      width: 90%; /* Full width for mobile devices */
+      margin-bottom: 20px;
+    }
+  
+    .name {
+      font-size: 2rem;
+    }
+  
+    .course_card h3 {
+      font-size: 12px;
+      width: auto;
+    }
+  
+    .course_card p:nth-of-type(1) {
+      font-size: 16px;
+    }
+  
+    .course_card p:nth-of-type(3) {
+      font-size: 1rem;
+    }
+  
+    .info {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .button {
+      width: 100%;
+      margin-top: 10px;
+      padding: 12px;
+    }
+  
+    .time {
+      transform: translate(360%, 20%);
+      font-size: 12px;
+    }
+    .button {
+        margin-left: 0;
+        margin-top: 10px;
+        padding: 12px;
+        width: 100%; /* Make button full-width on small devices */
+      }
+      .heading{
+        margin-top: -80px;
+      }
+      .course_card h3{
+        width: 50%;
+      }
+      .button{
+        width: 50%;
+        margin-left: 25%;
+      }
+  }
+  
+ 
+  
+  

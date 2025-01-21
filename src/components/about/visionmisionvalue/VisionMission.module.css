@@ -1,167 +1,88 @@
-/* VisionMission.module.css */
+/*VisionMission.module.css*/
 
-.visionMissionValueSection {
+/* .visionMissionValueSection {
   padding-left: 10rem;
   padding-right: 10rem;
   margin-top: 20px;
+} */
+
+/* Container styling */
+.visionMissionContainer {
+  max-width: 1200px;
+  background-color: aqua;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
 }
 
-.visionSection,
-.missionSection,
+/* Vision-Mission image styling */
+.visionMissionImage img {
+  width: 100%;
+  max-height: 50%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+
+}
+
+/* Section common styling */
+.visionSection, 
+.missionSection, 
 .valueSection {
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
-  border-radius: 10px; /* Rounded corners for a softer look */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  margin-bottom: 50px;
+  padding: 20px;
+  background: #fdf1df;
+  width: 30%;
+  /* border-left: 5px solid #007bff; */
+  border-radius: 100px;
+  box-shadow: 10px 6px 8px rgba(0, 0, 0, 0.1);
 }
 
-.visionSection:hover,
-.missionSection:hover,
-.valueSection:hover {
-  transform: translateY(-5px); /* Lift the card on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Slightly bigger shadow on hover */
+/* Section headings */
+.sectionTitle {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 15px;
 }
 
-.visionContentBlock,
-.missionContentBlock,
-.valueContentBlock {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  border-radius: 8px;
-  padding: 2rem; /* Increased padding for more space */
-  transition: all 0.3s ease; /* Smooth transition for all properties */
-}
-
-.textBlock {
-  flex: 1;
-}
-
-.contentTitle {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: #fda31b;
-  text-transform: uppercase; /* Make the title stand out */
-  letter-spacing: 1px; /* Add some spacing between letters for a polished look */
-}
-
-.visionContent,
-.missionContent,
-.valueContent {
-  font-size: 1.1rem; /* Slightly larger font for better readability */
-  color: black;
+/* Section paragraph content */
+.sectionContent {
+  color: #555;
+  font-size: 18px;
   line-height: 1.6;
-  text-align: left;
+  margin-bottom: 20px;
 }
 
-.visionImage,
-.missionImage,
-.valueImage {
-  width: 50%; /* Set the desired width */
-  height: 50%; /* Set the desired height */
-  object-fit: cover; /* Ensures the image fills the box without distortion */
-  border-radius: 8px; /* Rounded corners for images */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for images */
-  transition: transform 0.3s ease; /* Smooth transition for image scaling */
+/* Images within sections */
+.sectionImage {
+  max-width: 100%;
+  height: auto;
+  margin-top: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.visionImage:hover,
-.missionImage:hover,
-.valueImage:hover {
-  transform: scale(1.05); /* Slightly zoom in the image on hover */
-}
-
-@media (max-width: 1200px) {
-  .visionMissionValueSection {
-    padding-left: 5rem;
-    padding-right: 5rem; /* Reduced padding for medium screens */
-  }
-
-  .visionContentBlock,
-  .missionContentBlock,
-  .valueContentBlock {
-    gap: 1rem; /* Reduced gap between items */
-    padding: 1.5rem; /* Adjusted padding for medium screens */
-  }
-
-  .contentTitle {
-    font-size: 1.8rem; /* Adjusted font size for medium screens */
-  }
-
-  .visionContent,
-  .missionContent,
-  .valueContent {
-    font-size: 1.1rem; /* Adjusted font size for readability */
-  }
-
-  .visionImage,
-  .missionImage,
-  .valueImage {
-    width: 60%; /* Adjusted image width */
-  }
-}
-
+/* Responsive styles */
 @media (max-width: 768px) {
-  .visionMissionValueSection {
-    padding-left: 2rem;
-    padding-right: 2rem; /* Reduced padding for small screens */
+  .visionMissionContainer {
+    padding: 20px;
   }
 
-  .visionContentBlock,
-  .missionContentBlock,
-  .valueContentBlock {
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem; /* Increased gap for mobile view */
-    padding: 1.5rem; /* Adjusted padding for smaller screens */
+  .visionSection, 
+  .missionSection, 
+  .valueSection {
+    padding: 15px;
   }
 
-  .contentTitle {
-    font-size: 1.6rem; /* Smaller font size for mobile */
+  .sectionTitle {
+    font-size: 24px;
   }
 
-  .visionContent,
-  .missionContent,
-  .valueContent {
-    font-size: 1rem; /* Adjusted content font size */
-  }
-
-  .visionImage,
-  .missionImage,
-  .valueImage {
-    width: 80%; /* Increased image width for better visibility */
-    height: auto; /* Adjust image height for smaller devices */
-  }
-}
-
-@media (max-width: 480px) {
-  .visionMissionValueSection {
-    padding-left: 1rem;
-    padding-right: 1rem; /* Minimized padding for very small screens */
-  }
-
-  .visionContentBlock,
-  .missionContentBlock,
-  .valueContentBlock {
-    padding: 1rem; /* Reduced padding for small screens */
-  }
-
-  .contentTitle {
-    font-size: 1.4rem; /* Adjusted font size for very small screens */
-  }
-
-  .visionContent,
-  .missionContent,
-  .valueContent {
-    font-size: 0.9rem; /* Smaller font size for mobile */
-  }
-
-  .visionImage,
-  .missionImage,
-  .valueImage {
-    width: 90%; /* Full width for images */
-    height: auto;
+  .sectionContent {
+    font-size: 16px;
   }
 }

@@ -208,7 +208,7 @@ textarea:focus::placeholder {
 }
 .Mapaddress{
   display: flex;
-  gap: 5px;
+  gap: 42px;
   margin-bottom: 20px;
 }
 

@@ -1,0 +1,116 @@
+/* OurPartners.module.css */
+.ourPartnersContainer {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  overflow: hidden; /* Hide overflowing content */
+  margin-left: 150px; /* Reduced margin for responsiveness */
+  margin-right: 150px; /* Reduced margin for responsiveness */
+}
+
+.OurPartnerHeading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #f59817, #ea6507); /* Gradient colors */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+/* Row styling */
+.row {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  width: 100%; /* Ensure the row takes the full width */
+  flex-wrap: nowrap;
+}
+
+/* Row 1 - Left side sliding */
+.row-left {
+  animation: scrollSliderLeft 30s linear infinite; /* Infinite left sliding */
+}
+
+@keyframes scrollSliderLeft {
+  0% {
+    transform: translateX(0); /* Start at the left */
+  }
+  100% {
+    transform: translateX(-100%); /* Move all the way to the left */
+  }
+}
+
+/* Row 2 - Right side sliding */
+.row-right {
+  animation: scrollSliderRight 30s linear infinite; /* Infinite right sliding */
+}
+
+@keyframes scrollSliderRight {
+  0% {
+    transform: translateX(0); /* Start at the right */
+  }
+  100% {
+    transform: translateX(100%); /* Move all the way to the right */
+  }
+}
+
+/* Partner styling */
+.partner {
+  width: 150px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect for smooth transformation */
+}
+
+/* Partner image styling */
+.partner img {
+  width: 100%;
+  height: 80%;
+  object-fit: contain; /* Make images fit inside without cropping */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect */
+.partner:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .partner {
+    width: 120px; /* Smaller images for medium screens */
+    height: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .partner {
+    width: 100px; /* Smaller images for tablets */
+    height: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .partner {
+    width: 80px; /* Even smaller images for mobile screens */
+    height: 60px;
+  }
+
+  .row {
+    gap: 10px; /* Reduce gap between items on mobile */
+  }
+
+  .OurPartnerHeading {
+    font-size: 1.8rem; /* Smaller heading for mobile */
+    margin-bottom: 20px;
+  }
+}

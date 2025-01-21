@@ -1,5 +1,5 @@
 import img1 from '..//src/components/cources/image/img1.webp'
-import img2 from '..//src/components/cources/image/img2.jpg'   // Correct path and file name
+import img2 from '..//src/components/cources/image/img2.jpg'  
 import img3 from "..//src/components/cources/image/img3.jpg"
 import img4 from "..//src/components/cources/image/img4.webp"
 import img5 from "..//src/components/cources/image/img5.jpeg"
@@ -19,9 +19,9 @@ import img17 from "..//src/components/cources/image/img17.avif"
 export const OurCources = [
   {   
     id:"Software testing",
-    time:"3 weeks",
+    time:"new",
     image: img1,
-    type: "New",
+    type: "This course provides students with a comprehensive understanding of software testing principles, techniques, and methodologies.",
     heading: "Software Testing ",
     rating: <>(5.0/7 Rating)</>,
     price:"$29",
@@ -36,12 +36,40 @@ export const OurCources = [
 
     description:"The Complete Software Testing Course - Beginner to Advance is designed to teach you everything you need to know about software testing, from the basics to advanced techniques. You will learn manual testing, automated testing, QA processes, and how to find and fix bugs in software. The course covers popular tools like Selenium, JUnit, and others, with hands-on projects and real-world examples to help you build practical skills.",
 
+
+    Lectures: [
+      {
+        title: "Module 1: Introduction to Testing",
+        lectures: [
+          { title: "Lecture 1: Introduction to Testing", link: "https://storage.googleapis.com/mannequin/blobs/69d4b519-ec90-4a49-a8f1-e44394e281ad.mp4" },
+          { title: "Lecture 2: Manual Testing", link: "https://www.apple.com/105/media/us/services/2024/416d7ef9-e5f1-4bdb-9443-3b7a1958236f/anim/hero/large.mp4" },
+          { title: "Lecture 3: Automation Testing", link: "https://www.apple.com/105/media/us/ipad/2024/45762adb-901a-4726-8b0c-1f3ee092b09a/anim/welcome-hero/xlarge_2x.mp4" }
+        ]
+      },
+      {
+        title: "Module 2: Automated Testing",
+        lectures: [
+          { title: "Lecture 1: Introduction to Selenium", link: "https://www.apple.com/105/media/us/services/2024/416d7ef9-e5f1-4bdb-9443-3b7a1958236f/anim/hero/large.mp4" },
+          { title: "Lecture 2: Writing Test Scripts", link: "https://example.com/lecture4.mp4" }
+        ]
+      },
+      {
+        title: "Module 3: QA Processes",
+        lectures: [
+          { title: "Lecture 1: Understanding QA", link: "https://example.com/lecture5.mp4" },
+          { title: "Lecture 2: Bug Tracking", link: "https://example.com/lecture6.mp4" }
+        ]
+      }
+    ],
+    
+
+
     Syllabus: [ // Multiple syllabi
       {
-        title: "Module1",
+        title: "Core Java-Section-1 (Basic java)",
         content: [
-          "Introduction to Software Testing",
-          "Manual Testing Techniques",
+          "Introduction of Java",
+          "java and eclip installation",
           "Automation Testing using Selenium"
         ]
       },
@@ -107,33 +135,173 @@ export const OurCources = [
         ]
       },
 
+      {
+        title: "Module9",
+        content: [
+          "Introduction to Software Testing",
+          "Manual Testing Techniques",
+          "Automation Testing using Selenium"
+        ]
+      },
+
+      {
+        title: "Module10",
+        content: [
+          "Introduction to Software Testing",
+          "Manual Testing Techniques",
+          "Automation Testing using Selenium"
+        ]
+      },
+
 
     ],
-    notes: [
+    Notes: [ // Multiple Notes
       {
-        title: 'Introduction to Software Testing',
-        content: 'This note covers the basics of software testing, including the types of testing and why they are important.'
+        title: "Chapter 1",
+        content: ["Introduction to React", "JSX Overview"],
+        pdfUrl: "public/MCA_notes/Doubly_Linked_List_Insertion.pdf", // Example path to the uploaded PDF
       },
       {
-        title: 'Automation Testing with Selenium',
-        content: 'Learn how to use Selenium to automate repetitive testing tasks.'
-      }
+        title: "Module2 Notes",
+        content: [
+          "Advanced Testing Techniques",
+          "Integration Testing",
+          "Performance Testing with JMeter"
+        ]
+      },
+      {
+        title: "Module3 Notes",
+        content: [
+          "Introduction to Software Testing",
+          "Manual Testing Techniques",
+          "Automation Testing using Selenium"
+        ]
+      },
+
+      {
+        title: "Module4 Notes",
+        content: [
+          "Introduction to Software Testing",
+          "Manual Testing Techniques",
+          "Automation Testing using Selenium"
+        ]
+      },
+
+      {
+        title: "Module5 Notes",
+        content: [
+          "Introduction to Software Testing",
+          "Manual Testing Techniques",
+          "Automation Testing using Selenium"
+        ]
+      },
+
+      {
+        title: "Module6 Notes",
+        content: [
+          "Introduction to Software Testing",
+          "Manual Testing Techniques",
+          "Automation Testing using Selenium"
+        ]
+      },
+
+      {
+        title: "Module7 Notes",
+        content: [
+          "Introduction to Software Testing",
+          "Manual Testing Techniques",
+          "Automation Testing using Selenium"
+        ]
+      },
+
+      {
+        title: "Module8 Notes",
+        content: [
+          "Introduction to Software Testing",
+          "Manual Testing Techniques",
+          "Automation Testing using Selenium"
+        ]
+      },
+
+      {
+        title: "Module9 Notes",
+        content: [
+          "Introduction to Software Testing",
+          "Manual Testing Techniques",
+          "Automation Testing using Selenium"
+        ]
+      },
+
+      {
+        title: "Module10 Notes",
+        content: [
+          "Introduction to Software Testing",
+          "Manual Testing Techniques",
+          "Automation Testing using Selenium"
+        ]
+      },
+
+
     ],
 
     lectures: [
       { title: "Introduction to Software Testing", link: "https://storage.googleapis.com/mannequin/blobs/69d4b519-ec90-4a49-a8f1-e44394e281ad.mp4" },
       { title: "Advanced Testing Techniques", link: "https://storage.googleapis.com/mannequin/blobs/69d4b519-ec90-4a49-a8f1-e44394e281ad.mp4_" }
     ],
-    
+
+    Exams: [ // New Exams section
+      {
+        ExamTitle: "Introduction to Testing",
+    content: [
+      {
+        ExamImage: "https://examjila.com/public/assets/images/oLevelM2R5mockTest.webp",
+        title: "Introduction to Testing - Part 1",
+        ExamButton: "Start Exam",
+      },
+      {
+        ExamImage: "https://examjila.com/public/assets/images/oLevelM2R5mockTest.webp",
+        title: "Introduction to Testing - Part 2",
+        ExamButton: "Start Exam",
+      },
+      {
+        ExamImage: "https://examjila.com/public/assets/images/oLevelPythonOnlineTest.webp", // Replace with a valid URL
+        title: "Introduction to Testing - Part 3",
+        ExamButton: "Start Exam",
+      },
+    ],
   },
+      {
+        ExamTitle:"Automated Testing",
+        content:[
+          {
+        ExamImage:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTooFcnQjbB_eOxhCvWVg5C5WoGYNNvwUeuBw&s",
+        title: "Introduction to Testing",
+        ExamButton:"Start Exam",
+          }
+        ]
+      },
+      {
+        ExamTitle:"QA Processes",
+        content:[
+          {
+        ExamImage:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTooFcnQjbB_eOxhCvWVg5C5WoGYNNvwUeuBw&s",
+        title: "Introduction to Testing",
+        ExamButton:"Start Exam",
+          }
+        ]
+      },
+    ],
+  },
+
+  
 
   
   {   
     id:"AWS Administrator",
-    time:"3 weeks",
+    time:"Popular",
     image: img2,
 
-    type: "Popular",
+    type: "It covers essential cloud computing concepts, AWS services, and hands-on practices to efficiently manage cloud infrastructure.",
     heading: "AWS Administrator ",
     rating: <>(4.5/5 Rating)</>,
     price:"$29",
@@ -146,10 +314,10 @@ export const OurCources = [
 
   {   
     id:"Dev-Ops",
-    time:"3 weeks",
+    time:"Popular",
     image: img3,
 
-    type: "Popular",
+    type: "Students will learn how to implement automation, continuous integration/continuous deployment (CI/CD).",
     heading: "Dev-Ops",
     rating: <>(4.5/5 Rating)</>,
     price:"$29",
@@ -163,10 +331,10 @@ export const OurCources = [
 
   {   
     id:"power-BI",
-    time:"3 weeks",
+    time:"Trending",
     image: img4,
 
-    type:"Trending",
+    type:"Students will learn how to connect, transform, visualize, and analyze data to generate insights and make data-driven decisions.",
     heading: "Power BI",
     rating: <>(4.5/5 Rating)</>,
     price:"$29",
@@ -180,10 +348,10 @@ export const OurCources = [
 
   {   
     id:"Data-science",
-    time:"3 weeks",
+    time:"new",
     image: img5,
 
-    type:"Data Science",
+    type:"This comprehensive course covers the fundamental and advanced concepts of data science.",
     heading: "Data Science",
     rating: <>(4.5/5 Rating)</>,
     price:"$29",
@@ -197,9 +365,9 @@ export const OurCources = [
 
   { 
     id:"Full-stack-developer", 
-    time:"3 weeks",
+    time:"new",
     image: img6,
-    type:"New",
+    type:"This course provides comprehensive training in full-stack web development, covering both front-end and back-end technologies.",
     heading: "Full Stack Devloper",
     rating: <>(4.5/5 Rating)</>,
     price:"$29",
@@ -213,10 +381,10 @@ export const OurCources = [
 
   { 
     id:"Big-Data",
-    time:"3 weeks",
+    time:"new",
     image: img7,
 
-    type:"New",
+    type:"This course provides an in-depth understanding of big data concepts, technologies, and tools used to manage, process, and analyze large-scale data efficiently. ",
     heading: "Big Data",
     rating: <>(4.5/5 Rating)</>,
     price:"$29",
@@ -230,10 +398,10 @@ export const OurCources = [
 
   {  
     id:"Medical-Coding",
-    time:"3 weeks",
+    time:"Trending",
     image: img8,
 
-    type:"Trending",
+    type:"This comprehensive course equips students with the essential knowledge and skills required for a successful career in medical coding.",
     heading: "Medical  Coding",
     rating: <>(4.5/5 Rating)</>,
     price:"$29",
@@ -247,10 +415,10 @@ export const OurCources = [
 
   {   
     id:"AR-Caller",
-    time:"3 weeks",
+    time:"Trending",
     image: img9,
 
-    type:"Trending",
+    type:"This course provides in-depth training on the role of an Accounts Receivable (AR) Caller in the healthcare industry.",
     heading: "AR Caller ",
     rating: <>(4.5/5 Rating)</>,
     price:"$29",
@@ -264,10 +432,10 @@ export const OurCources = [
 
   {   
     id:"Java",
-    time:"3 weeks",
+    time:"Trending",
     image: img10,
 
-    type:"Trending",
+    type:"This course provides an in-depth exploration of Java programming, focusing on object-oriented principles and practical development skills.",
     heading: "Java",
     rating: <>(4.5/5 Rating)</>,
     price:"$29",
@@ -281,10 +449,10 @@ export const OurCources = [
 
   {   
     id:"C#-and-.Net",
-    time:"3 weeks",
+    time:"Trending",
     image: img11,
 
-    type:"Trending",
+    type:"This course provides a deep dive into C# programming and the .NET framework, focusing on both foundational and advanced topics.",
     heading: "C# and .NET",
     rating: <>(4.5/5 Rating)</>,
     price:"$29",
@@ -298,9 +466,9 @@ export const OurCources = [
 
   {   
     id:"Business-Analyst",
-    time:"3 weeks",
+    time:"Trending",
     image: img12,
-    type:"Trending",
+    type:"This course is designed to provide students with a comprehensive understanding of business analysis.",
    
     heading: "Business Analyst",
     rating: <>(4.5/5 Rating)</>,
@@ -315,9 +483,9 @@ export const OurCources = [
 
   {   
     id:"Sales-Force",
-    time:"3 weeks",
+    time:"Trending",
     image: img13,
-    type:"Trending",
+    type:"This course offers an in-depth exploration of Salesforce as a Customer Relationship Management (CRM) platform.",
     
     heading: "Sales Force Adm Dev ",
     rating: <>(4.5/5 Rating)</>,
@@ -332,9 +500,9 @@ export const OurCources = [
 
   {   
     id:"SQL",
-    time:"3 weeks",
+    time:"Trending",
     image: img14,
-    type:"Trending",
+    type:"This course provides a comprehensive understanding of SQL (Structured Query Language).",
     
     heading: "SQL ",
     rating: <>(4.5/5 Rating)</>,
@@ -349,9 +517,9 @@ export const OurCources = [
 
   {   
     id:"Scrum-Master",
-    time:"3 weeks",
+    time:"Trending",
     image: img15,
-    type:"Trending",
+    type:"This course provides a deep dive into Scrum, an Agile framework for managing and completing complex projects.",
    
     heading: "Scrum Master ",
     rating: <>(4.5/5 Rating)</>,
@@ -366,9 +534,9 @@ export const OurCources = [
 
   {   
     id:"Marketing",
-    time:"3 weeks",
+    time:"Trending",
     image: img16,
-    type:"Trending",
+    type:"This comprehensive course covers all aspects of digital marketing, focusing on key strategies, tools, and techniques for driving online success.",
     
     heading: "Digital Marketing",
     rating: <>(4.5/5 Rating)</>,
@@ -383,9 +551,9 @@ export const OurCources = [
 
   {   
     id:"Skill",
-    time:"3 weeks",
+    time:"Trending",
     image: img17,
-    type:"Trending",
+    type:"This course is designed to help individuals develop essential soft skills that are critical to personal and professional success.",
     heading: "Soft Skills",
     rating: <>(4.5/5 Rating)</>,
     price:"$29",

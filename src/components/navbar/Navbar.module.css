@@ -1,34 +1,37 @@
-/* Navbar.module.css */
-.container {
-
-  position: fixed;
-  background-color: #fff;
-  /* Set background color */
-  margin-top: -10px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  width: 99vw;
-  z-index: 100;
-  padding: 20px;
+/* Global Reset for Box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Prevent elements from overflowing */
 }
 
-/* Logo styles */
-/* .logo img {
-    width: 162px;
-    height: 50px;
-  } */
+/* Prevent Horizontal Scrolling */
+body {
+  overflow-x: hidden; /* Disable horizontal scrolling */
+  margin: 0; /* Remove any default margins */
+}
+
+/* Navbar Container (Sticky Navbar) */
+.container {
+  position: sticky; /* Keeps the navbar in place */
+  top: 0; /* Sticks the navbar to the top */
+  background-color: #fff; /* Set background color */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: 100%; /* Full width */
+  z-index: 100; /* Ensures it stays above other content */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between navbar items and button */
+  height: 80px;
+  margin: 0; /* Remove unnecessary left margin */
+}
 
 /* Navbar container */
 .Navbar {
   display: flex;
-  justify-content: center;
-
+  justify-content: center; /* Center navbar items */
+  flex: 1; /* Allow navbar items to take up equal space */
 }
-
-/* Wrapper for logo and menu buttons */
-/* .wrapper {
-    display: flex;
-    align-items: center;
-  } */
 
 /* Navbar list styles */
 .navbarList {
@@ -36,17 +39,13 @@
   display: flex;
   margin: 0;
   padding: 0;
+  gap: 20px; /* Adds gap between navbar items */
 }
 
-/*gap between navbar link*/
+/* Navbar item styles */
 .navbarItem {
-  margin-right: 20px;
-  margin-top: 0px;
+  margin: 0; /* Reset default margins */
 }
-
-/* .navbarItem:last-child {
-    margin-right: 0;
-  } */
 
 /* Navbar link styles */
 .navbarLink {
@@ -54,177 +53,46 @@
   color: #333;
   font-size: 16px;
   font-weight: 600;
-  padding: 10px 10px;
-  transition: all 0.3s ease;
+  padding: 10px 15px; /* Inner padding for links */
+  transition: color 0.3s ease; /* Smooth hover effect */
 }
 
 .navbarLink:hover {
-  color: orange;
+  color: orange; /* Highlight on hover */
 }
 
-/* Header actions container */
-.headerActions {
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  gap: 2rem;
-  flex-direction: row;
-
-
+.navbarLogin{
+  margin-left: 40%;
+  margin-top: -1px;
+}
+.navbarLoginLink{
+  
 }
 
-/* Header action button styles  cart */
-.headerActionBtn {
-  position: relative;
-  display: flex;
-  margin-top: -20px;
-  background-color: transparent;
-  border: none;
-}
-
-.search {
-  display: flex;
-  margin-top: -20px;
-  background-color: transparent;
-  border: none;
-}
-
-.search:hover,
-.headerActionBtn:hover {
-  color: orange;
-  cursor: pointer;
-}
-
-/* Badge style for cart */
-.btnBadge {
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  background-color: #FF5733;
-  color: white;
-  font-size: 12px;
-  border-radius: 50%;
-  width: 18px;
-  height: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Try for free button style */
-.btnHasBefore {
-  background-color: orange;
-  color: white;
-  padding: 15px 20px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-  float: right;
-  margin-right: 60px;
-  margin-top: -20px;
-
-}
-
-.btnHasBefore:hover {
-  color: blue;
-
-}
-
-
-
-/* Overlay style (for mobile menu overlay) */
-.overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  z-index: 999;
-}
-
-/* Navbar close button */
-.navCloseBtn {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 25px;
-}
-
-/* Mobile navbar styles */
+/* Mobile view adjustments */
 @media screen and (max-width: 768px) {
-
-  /* Default mobile navbar state (hidden) */
   .navbarList {
-    display: none;
-    list-style: none;
+    display: none; /* Hide by default */
     flex-direction: column;
+    background-color: white;
     position: absolute;
-    top: 70px;
+    top: 100%; /* Place below the navbar */
     left: 0;
     right: 0;
-    background-color: white;
-    z-index: 10;
+    z-index: 1000;
+    border-top: 1px solid #ddd; /* Optional border */
   }
 
-  /* When the menu is opened */
   .navbarListOpen {
-    width: 40%;
-    height: 300%;
-    display: flex;
-    margin-left: 10px;
-    animation: slideIn 0.3s ease-in-out;
-    background-color:antiquewhite;
+    display: flex; /* Show the menu when open */
   }
 
-  /* Animation for sliding in */
-  @keyframes slideIn {
-    from {
-      transform: translateY(-100%);
-    }
-
-    to {
-      transform: translateY(0);
-    }
-  }
-
-  /* Styling for navbar items (if needed) */
-  .navbarItem {
-    padding: 10px;
-    text-align: center;
-  }
-
-  /* Mobile menu icon */
   .menuIcon {
-    display: block;
+    display: block; /* Show menu icon in mobile */
     cursor: pointer;
   }
 
-  /* Adjust badge centering for mobile view */
-  .headerActionBtn {
-    position: relative;  /* Makes the badge position relative to this parent */
-  }
-
-  .btnBadge {
-  position: relative;
-  top: -5px;
-  right: 10px;
-  background-color: #FF5733;
-  color: white;
-  font-size: 12px;
-  border-radius: 50%;
-  width: 18px;
-  height: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;  /* Optional: Make the number bold */
-  }
-
-  /* Hide .btnHasBefore content on mobile */
   .btnHasBefore {
-    display: none;  /* This will hide the element completely */
+    display: none; /* Hide "Try for free" button in mobile */
   }
-
 }

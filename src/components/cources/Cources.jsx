@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FaStar, FaRegStar } from 'react-icons/fa'; // Importing the icons for filled and unfilled stars
+import { IoLibraryOutline,IoPeopleOutline  } from "react-icons/io5";
 import { OurCources } from '../../OurCources';  // Path to the file containing the course data
 import styles from './Cources.module.css'; // Assuming you have a corresponding CSS module for styles
 import ScrollToTop from '../Scrolltop';  // Import ScrollToTop component
@@ -16,9 +17,12 @@ function Cources() {
   }, [location]);
 
   return (
+    
     <div className={styles.courses_container}>
       {/* ScrollToTop component to ensure it works on route change */}
       <ScrollToTop />
+
+     
 
       {/* Header Section */}
       <div className={styles.head}>
@@ -37,11 +41,12 @@ function Cources() {
             <img src={course.image} alt={course.heading} className={styles.course_image} />
 
             <div className={styles.content}>
-              {/* Type Section */}
-              <div className={styles.type}>{course.type}</div>
-
+             
               {/* Course Info */}
               <div className={styles.heading}>{course.heading}</div>
+
+               {/* Type Section */}
+               <div className={styles.type}>{course.type}</div>
 
               {/* Rating Stars */}
               <div className={styles.rating}>
@@ -63,15 +68,13 @@ function Cources() {
 
               {/* Lessons & Students */}
               <div className={styles.studlesson}>
-                <div className={styles.lesson}>{course.lesson}</div>
-                <div className={styles.students}>{course.students}</div>
+                <div className={styles.lesson}> <IoLibraryOutline color='grey' />{course.lesson}</div>
+                <div className={styles.students}><IoPeopleOutline color='grey' />{course.students}</div>
                 {/* Button */}
 
-               
                 <Link to={`/course/${course.id}`}>
                 <button className={styles.learn_more_button}>{course.button}</button>
                 </Link>
-
                 
               </div>
             </div>

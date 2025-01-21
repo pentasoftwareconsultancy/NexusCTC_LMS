@@ -1,0 +1,126 @@
+
+  
+  /* Styles for the list */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Container for each exam */
+  .examContainer {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .examContainer:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styles for the toggle button */
+  .toggleButton {
+    background-color: #f6d88b;
+    color: rgb(249, 134, 11);
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toggleButton:hover {
+    background-color: #f5c748;
+  }
+  
+  /* Styles for the expanded content container */
+  .expandedContent {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  /* Styles for each content block */
+  .contentBox {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .contentBox:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contentBox:last-child {
+    margin-bottom: 0; /* No margin for the last content block */
+  }
+  
+  /* Styles for the course image */
+  .course_image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+  }
+  
+  /* Styles for the content title */
+  h2 {
+    font-size: 1.4rem;
+    color: #444;
+    margin: 0;
+    flex-grow: 1;
+  }
+  
+  /* Styles for the exam button */
+  .ExamButton {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .ExamButton:hover {
+    background-color: #218838;
+  }
+  
+
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;  /* Ensure it appears on top */
+  }
+  
+  .popupContent {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    max-width: 90%;  /* Optional: Make the popup responsive */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Optional: Add shadow for better visibility */
+  }
+  
+  input {
+    margin: 10px 0;
+    padding: 8px;
+    width: 100%;
+  }

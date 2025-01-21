@@ -1,11 +1,20 @@
 import React from 'react'
 import styles from './hero.module.css'
 import { IoIosArrowRoundForward } from "react-icons/io";
+import { useNavigate } from 'react-router-dom';  // Import useNavigate
 import shape from '../../../assets/shape.png'
 import heroimg1 from '../../../assets/heroimg1.jpg'
 import heroimg2 from '../../../assets/heroimg2.jpg'
 
 function Hero() {
+
+    const navigate = useNavigate();  // Get the navigate function
+
+    // Function to handle "Find  More Courses" button click
+    const findcources = () => {
+        navigate('/cources');  // This will navigate to the courses page
+    };
+
     return (
         <div className={styles.hero}>
             
@@ -18,7 +27,7 @@ function Hero() {
                         Excepteur sint occaecat cupidatat non proident sunt in<br /> culpa qui officia deserunt mollit.
                     </p>
 
-                    <div className={styles.btn_has_before}>
+                    <div className={styles.btn_has_before} onClick={findcources}>
                         Find courses
                         <div className={styles.arrow}>
                             <IoIosArrowRoundForward />

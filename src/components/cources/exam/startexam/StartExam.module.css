@@ -1,0 +1,345 @@
+/* Container Styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 4rem; /* Reduced padding for better screen space utilization */
+  background-color: #f0f4f8; /* Light background color */
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  height: 120vh; /* Ensure full height of the viewport */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 2px solid #d3d3d3;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding-left: 20%;
+}
+
+.header h1 {
+  margin-top: 50px;
+}
+
+.details {
+  padding: 10px;
+}
+
+.details p {
+  margin: 0;
+  color: #333;
+  font-size: 1rem;
+  margin-top: 5px;
+  text-align: justify;
+}
+
+/* Exam Body Layout */
+.examBody {
+  display: flex;
+  gap: 30px;
+  margin-top: 1rem;
+  align-items: stretch; /* Make both sections stretch equally */
+}
+
+.questions {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 2;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Stretch to match the container height */
+}
+
+.question {
+  margin-top: 10%;
+  padding-left: 20%;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 1rem;
+  padding-bottom: 20px;
+  padding-right: 20%;
+}
+
+/* Option Button Styling */
+.optionButton {
+  padding: 15px 20px;
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  color: black;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  border: 1px solid grey;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.optionButton:hover {
+  background-color: #0aae23; /* Darker green on hover */
+}
+
+.selected {
+  background-color: rgb(53, 153, 53) !important; /* Darker green for selected options */
+}
+
+/* Option Numbering Styling */
+.optionsNumbring {
+  background-color: rgb(14, 65, 14);
+  color: white;
+  width: 40px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-right: 10px;
+  margin-top: -15px;
+  margin-left: -19.9px;
+}
+
+.NumOption {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Pagination Button Styles */
+.paginationButton button {
+  padding: 12px 25px;
+  background: linear-gradient(90deg, #13a85d, #108f3a);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.paginationPreviousButton {
+  float: left;
+  margin-left: 4rem;
+}
+
+.paginationNextButton {
+  float: right;
+  margin-right: 4rem;
+}
+
+.pagination {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  flex: 1;
+  border-left: 2px solid #d3d3d3;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  height: 100%; /* Stretch to match the container height */
+}
+
+.sidebar p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.palette {
+  margin-top: 20px;
+}
+
+.palettePrevious {
+  float: left;
+  background: linear-gradient(90deg, #13a85d, #108f3a);
+}
+
+.paletteNext {
+  float: right;
+  margin-right: 15px;
+  background: linear-gradient(90deg, #13a85d, #108f3a);
+}
+
+.paletteGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.paletteGrid button:hover {
+  background-color: #4caf50;
+  color: white;
+}
+
+.statusContainer {
+  display: flex;
+  gap: 5rem;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.statusContainer p {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 40%;
+  color: black;
+  border-radius: 5px;
+}
+
+.AttemptedContainer {
+  background-color: green;
+  color: white;
+  border-radius: 5px 5px 0 0;
+}
+
+.notAttemptedContainer {
+  background-color: rgb(240, 41, 41);
+  color: white;
+  border-radius: 5px 5px 0 0;
+}
+
+/* Attempted and Not Attempted Styling */
+.attempted {
+  background-color: green;
+  color: white;
+}
+
+.notAttempted {
+  background-color: rgb(248, 153, 153);
+  color: white;
+}
+
+.palettepaginationNumbering {
+  padding-top: 30px;
+  text-align: center;
+}
+
+/* Footer Styles */
+.footer {
+  text-align: center;
+}
+
+.footer button {
+  margin-top: 30px;
+  background: linear-gradient(90deg, #eb1633, #e61313);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .container {
+    padding: 2rem 3rem;
+  }
+
+  .header {
+    padding-left: 10%;
+  }
+
+  .examBody {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .questions,
+  .sidebar {
+    flex: 1;
+    height: auto; /* Let both sections adjust automatically */
+  }
+
+  .options {
+    padding-right: 10%;
+  }
+
+  .paletteGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem 2rem;
+  }
+
+  .header {
+    padding-left: 5%;
+  }
+
+  .examBody {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .questions,
+  .sidebar {
+    flex: 1;
+    height: auto; /* Let both sections adjust automatically */
+  }
+
+  .options {
+    padding-right: 5%;
+  }
+
+  .paletteGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .paginationButton button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .paginationPreviousButton,
+  .paginationNextButton {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .header {
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .examBody {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .questions,
+  .sidebar {
+    flex: 1;
+    height: auto; /* Let both sections adjust automatically */
+  }
+
+  .options {
+    padding-right: 5%;
+  }
+
+  .paletteGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .paginationButton button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+}

@@ -1,0 +1,84 @@
+/* Center align the heading */
+.content h2 {
+  text-align: center;
+  margin-bottom: 20px; /* Add spacing below the heading */
+}
+
+/* Styling for the toggle button */
+.toggleButton {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 10px;
+  background-color: #fb9b2d;
+  color: black;
+  font-size: 18px;
+  text-align: left;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;  /* Ensures space between title and plus sign */
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.toggleButton:hover {
+  background-color: #f4911f; /* Darken button on hover */
+}
+
+/* Button height adjustment */
+button {
+  height: 40px; /* Fixed height for buttons */
+  padding: 10px; /* Optional: Adjust padding if needed */
+  font-size: 16px; /* Adjust font size for consistency */
+  border-radius: 4px; /* Optional: Add rounded corners */
+  border: none; /* Remove border */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+  
+}
+
+button:hover {
+  background-color: #f7a34a; /* Slightly darker color on hover */
+}
+.numberTitleContainer{
+  display: flex;
+}
+
+.lectureItem {
+  list-style: none;
+}
+
+/* Number circle styling */
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+/* Watch/Unwatch circle styles */
+.unwatchedCircle {
+  background-color: #ddd; /* Gray for unwatched */
+  color: #000;
+}
+
+.watchedCircle {
+  background-color: #4caf50; /* Green for watched */
+  color: #fff;
+}
+
+/* Vertical line connecting numbers */
+.connectionLine {
+  width: 2px; /* Line thickness */
+  height: 40px; /* Line length */
+  background-color: gray; /* Line color */
+  margin: 0 auto;
+}
+

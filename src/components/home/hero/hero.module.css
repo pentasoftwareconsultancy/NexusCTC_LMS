@@ -35,7 +35,7 @@ body{
     font-size: 1.70rem;
 }
 .span{
-    color: red;
+    color: rgb(249, 141, 9);
 }
 .hero_text{
     font-size: 1rem;
@@ -52,7 +52,13 @@ body{
     height: 20px;
     border-radius: 10px;
     color: white;
+    cursor: pointer;
 }
+
+.btn_has_before:hover{
+    background-color: orange;
+}
+
 .image_container {
     position: relative;
     width: 100%;

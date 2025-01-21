@@ -1,11 +1,26 @@
-import React from 'react'
+import React from 'react';
+import { sectionsData } from '../datafile/sectionData';
+import styles from './Hero.module.css'
 
-function Hero() {
+const HeroSection = () => {
+  const { image, altText, title, subTitle } = sectionsData.heroSection;
+
   return (
-    <div>
-      this is about page
-    </div>
-  )
-}
+    <section className={styles.heroSection}>
 
-export default Hero
+      {/* <video autoPlay muted loop className="heroImage">
+        <source src={sectionsData.heroSection.videoUrl} type="video/mp4" />
+      </video> */}
+      <img
+        src={image}
+        alt={altText}
+        className={styles.heroImage}
+      />
+      <h1 className={styles.heroTitle}>
+        {title}<span className={styles.logox}>{subTitle}</span>
+      </h1>
+    </section>
+  );
+};
+
+export default HeroSection;

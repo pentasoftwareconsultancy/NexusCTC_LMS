@@ -125,6 +125,7 @@
     transition: top 0.3s, left 0.3s;
 }
 
+
 /* Trigger Shine Effect when Hovered */
 .button:hover::before {
     top: 100%;

@@ -1,0 +1,144 @@
+.ourTeamSection {
+  padding-left: 10rem;
+  padding-right: 10rem;
+  background: linear-gradient(135deg, #fffef1, #f9f9f9); /* Gradient background */
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+/* Team Grid Layout */
+.teamGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center; /* Aligns cards horizontally */
+}
+
+/* Team Member Card */
+.teamMemberCard {
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+  border-radius: 8px;
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column; /* Ensures content stacks vertically */
+  align-items: center; /* Centers content */
+  padding: 1rem;
+  position: relative; /* Needed for overlay effects */
+}
+
+/* Hover effects on team member card */
+.teamMemberCard:hover {
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect: Add shadow and subtle scale transition */
+.teamMemberCard:hover .memberImage {
+  transform: scale(1.05); /* Slight zoom on hover */
+  transition: transform 0.3s ease;
+}
+
+/* Member Image */
+.memberImage {
+  width: 100%;
+  height: 300px; /* Set fixed height */
+  object-fit: cover; /* Ensure image covers area and maintains aspect ratio */
+  margin-bottom: 1rem;
+  border-radius: 8px; /* Rounded corners for image */
+}
+
+/* Member Name */
+.memberName {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+/* Media Queries for responsiveness */
+
+/* For larger devices (desktops, laptops) */
+@media (max-width: 1200px) {
+  .sectionTitle {
+      font-size: 2.2rem; /* Adjust font size for larger tablets and small desktops */
+  }
+
+  .teamMemberCard {
+      width: 280px; /* Slightly reduce width */
+  }
+}
+
+/* For tablets and smaller desktops */
+@media (max-width: 768px) {
+  .sectionTitle {
+      font-size: 2rem; /* Adjust font size for tablets */
+      margin-bottom: 1rem; /* Reduced margin for better space utilization */
+  }
+
+  .teamGrid {
+      gap: 1.5rem;
+  }
+
+  .teamMemberCard {
+      width: 100%; /* Cards take up full width on smaller screens */
+      max-width: 350px; /* Limit max width to keep cards consistent */
+      margin-bottom: 1.5rem;
+  }
+
+  .memberImage {
+      height: 250px; /* Adjust height for smaller screens */
+  }
+}
+
+/* For small screens (mobile phones) */
+@media (max-width: 480px) {
+  .sectionTitle {
+      font-size: 1.8rem; /* Adjust font size for mobile */
+      margin-bottom: 1rem;
+  }
+
+  .teamGrid {
+      gap: 1rem; /* Reduced gap on small screens */
+  }
+
+  .teamMemberCard {
+      width: 100%; /* Full width for mobile */
+      margin-bottom: 1rem;
+  }
+
+  .memberImage {
+      height: 200px; /* Smaller image height for mobile */
+  }
+
+  .memberName {
+      font-size: 1.2rem; /* Adjust name size for mobile */
+  }
+}
+
+/* For extra small screens (very small mobile devices) */
+@media (max-width: 375px) {
+  .sectionTitle {
+      font-size: 1.6rem; /* Smaller title for very small screens */
+  }
+
+  .teamMemberCard {
+      width: 100%; /* Ensure cards take full width */
+  }
+
+  .memberImage {
+      height: 180px; /* Further reduce image height */
+  }
+
+  .memberName {
+      font-size: 1rem; /* Further reduce name font size */
+  }
+}

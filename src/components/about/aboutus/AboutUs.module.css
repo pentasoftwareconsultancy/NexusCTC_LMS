@@ -1,0 +1,84 @@
+/* About Us Section */
+.aboutUsSection {
+  background-color: rgb(255, 233, 201);
+  padding-top: 40px;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  padding-bottom: 30px;
+}
+
+.aboutUs {
+  min-height: 60vh;
+  background-color: #dceafa;
+  text-align: justify;
+}
+
+.aboutUsTitle {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.aboutUsContent {
+  text-align: justify;
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens wider than 1200px (Desktop) */
+@media (min-width: 1200px) {
+  .aboutUsSection {
+    padding: 40px 10rem; /* Maintain larger padding for desktop */
+  }
+
+  .aboutUs {
+    padding: 30px;
+  }
+
+  .aboutUsTitle {
+    font-size: 2.2rem; /* Slightly increase the title size */
+  }
+
+  .aboutUsContent {
+    font-size: 16px; /* Increase font size slightly for better readability */
+  }
+}
+
+/* For tablets (600px to 1199px) */
+@media (max-width: 1199px) and (min-width: 600px) {
+  .aboutUsSection {
+    padding: 40px 5rem; /* Reduce padding for tablets */
+  }
+
+  .aboutUs {
+    padding: 25px;
+  }
+
+  .aboutUsTitle {
+    font-size: 1.8rem; /* Adjust title font size for tablets */
+  }
+
+  .aboutUsContent {
+    font-size: 14px; /* Adjust content font size for tablets */
+  }
+}
+
+/* For mobile (less than 600px) */
+@media (max-width: 599px) {
+  .aboutUsSection {
+    padding: 20px 1rem; /* Reduce padding for small screens */
+  }
+
+  .aboutUs {
+    padding: 15px;
+  }
+
+  .aboutUsTitle {
+    font-size: 1.6rem; /* Smaller title font size for mobile */
+  }
+
+  .aboutUsContent {
+    font-size: 13px; /* Adjust content font size for mobile */
+  }
+}

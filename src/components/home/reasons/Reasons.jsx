@@ -30,7 +30,7 @@ function Reasons() {
           <p>Lorem ipsum dolor sit amet consectur adipiscing<br />
             elit sed eiusmod ex tempor incididunt labore dolore<br />
             magna aliquaenim ad minim.</p>
-            <img src={reasonsshape3} alt="" className={styles.reasonsshape3}></img>
+            {/* <img src={reasonsshape3} alt="" className={styles.reasonsshape3}></img> */}
         </div>
         <div className={styles.features}>
           <ul>

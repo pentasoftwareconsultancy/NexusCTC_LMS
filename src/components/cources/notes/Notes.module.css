@@ -1,0 +1,86 @@
+/* Notes.module.css */
+
+.content {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.noteContainer {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.toggleButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  background-color: #ff9c10;
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: left;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggleButton:hover {
+  background-color: #eb8333;
+}
+
+.plus {
+  font-size: 1.5rem;
+}
+
+.list {
+  list-style-type: none;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.listItem {
+  font-size: 1rem;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.listItem span {
+  color: #333;
+}
+
+.downloadButton {
+  padding: 5px 10px;
+  background-color: #28a745;
+  color: white;
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.downloadButton:hover {
+  background-color: #218838;
+}
+
+p {
+  font-size: 1rem;
+  color: #777;
+}

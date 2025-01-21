@@ -1,0 +1,71 @@
+/* Style for the syllabus items */
+.content {
+  margin-left: 20px;
+  width: 60%;
+  padding: 20px;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 15%;
+  margin-bottom: 50px;
+  padding-left: 20px; /* Add padding for better alignment */
+}
+
+li {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+/* Styling the toggle button */
+.toggleButton {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 10px;
+  background-color: #fb9b2d;
+  color: black;
+  font-size: 18px;
+  text-align: left;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;  /* Ensures space between title and plus sign */
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.toggleButton.active {
+  background-color: #f1860c;
+}
+
+.toggleButton::after {
+  content: '';
+  margin-left: 10px;
+}
+
+.toggleButton:hover {
+  background-color: #f1860c;
+}
+
+/* Combined module container style with border-radius for the entire module */
+.moduleContainer {
+  border: 1px solid transparent;
+  border-radius: 8px; /* Apply border-radius for both button and list */
+  transition: border-color 0.3s ease; /* Smooth border transition */
+  overflow: hidden; /* Prevents content from overflowing rounded corners */
+}
+
+/* Add border and change color when active */
+.moduleContainer.active {
+  border-color: rgb(207, 193, 193); /* Apply border when active */
+  margin-bottom: 10px;
+}
+
+/* Styling the plus/minus sign */
+.plusSign {
+  font-size: 20px; /* Adjust font size of the plus/minus sign */
+  font-weight: bold;
+ 
+}

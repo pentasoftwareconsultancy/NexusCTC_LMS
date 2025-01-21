@@ -1,0 +1,73 @@
+.UpComingBatch {
+    margin-top: 30px;
+    /* Adjust as needed */
+    background-color: #f4f4f4;
+    padding: 20px;
+    border: 3px solid #f9c055;
+    border-radius: 10px;
+    max-height: 250px;
+    /* Add scrollable area */
+    overflow-y: auto;
+    width: 83%;
+    margin-left: 8rem;
+}
+
+.BatchTable {
+    width: 100%;
+    /* Full width of the container */
+    border-collapse: collapse;
+    /* Remove gaps between table borders */
+}
+
+.BatchTable th,
+.BatchTable td {
+    text-align: left;
+    /* Align text to the left */
+    padding: 10px;
+    /* Padding for better spacing */
+    border: 1px solid #dddddd;
+    /* Table cell borders */
+}
+
+.BatchTable th {
+    background-color: #f9f9f9;
+    /* Alternate row background color */
+    color: #1c1c1e;
+    font-weight: bold;
+    position: sticky;
+    /* Makes the header sticky */
+    top: 0;
+    /* Sticks the header to the top of the table */
+    z-index: 1;
+    /* Ensures the header stays above table rows */
+}
+
+.BatchTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+    /* Alternate row background color */
+}
+
+.SeeMoreButton {
+    background-color: #ffa500;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.SeeMoreButton:hover {
+    background-color: #e68900;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    background: linear-gradient(90deg, #f59817, #ea6507);
+    /* Gradient colors */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Makes the solid color transparent */
+}

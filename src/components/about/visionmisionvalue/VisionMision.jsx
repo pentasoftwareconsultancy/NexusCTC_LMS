@@ -39,7 +39,11 @@ const VisionMission = () => {
 
         {/* Vision Section */}
         {visionMission.Vision.map((item, index) => (
-          <div key={index} className={styles.visionSection}>
+          <div
+            key={index}
+            className={styles.visionSection}
+            style={{ backgroundColor: item.visionBackgroundColor }}  // Apply the background color
+          >
             <h2 className={styles.sectionTitle}>{item.title || "Our Vision"}</h2>
             <p
               className={styles.sectionContent}
@@ -53,7 +57,8 @@ const VisionMission = () => {
 
         {/* Mission Section */}
         {visionMission.Mission.map((item, index) => (
-          <div key={index} className={styles.missionSection}>
+          <div key={index} className={styles.missionSection}
+          style={{ backgroundColor: item.missionBackgroundColor }} >
             <h2 className={styles.sectionTitle}>{item.title || "Our Mission"}</h2>
             <p
               className={styles.sectionContent}
@@ -67,7 +72,9 @@ const VisionMission = () => {
 
         {/* Value Section */}
         {visionMission.Value.map((item, index) => (
-          <div key={index} className={styles.valueSection}>
+          <div key={index} className={styles.valueSection}
+          style={{ backgroundColor: item.valueBackgroundColor }} >
+
             <h2 className={styles.sectionTitle}>{item.title || "Our Values"}</h2>
             <p
               className={styles.sectionContent}
@@ -77,6 +84,7 @@ const VisionMission = () => {
             </p>
             {item.valueImage && <img src={item.valueImage} alt="Values" className={styles.sectionImage} />}
           </div>
+
         ))}
       </div>
 

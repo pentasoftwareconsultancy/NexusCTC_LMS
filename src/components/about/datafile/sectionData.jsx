@@ -82,6 +82,7 @@ export const sectionsData = {
         title: "Our Vision",
         vision: "At Nexus Corporate Training Center LLP, our vision is to deliver accessible, high-quality IT education with placement support, empowering learners in Pune and beyond. We aim to build an inclusive global community that equips students with the skills and connections needed to excel in the dynamic IT industry.",
         // visionImage: "https://www.kgbvjamshedpur.com/img/vision_mission/mission.jpg", // Path to image for the Vision section
+        visionBackgroundColor: " rgb(234, 247, 251)", 
 
 
       }
@@ -91,6 +92,7 @@ export const sectionsData = {
         title: "Our Mission",
         mission: "Our mission at Nexus Corporate Training Center LLP is to empower learners with job-focused software skills through tailored programs for all experience levels. We aim to equip each student with the knowledge and hands-on training needed to thrive in the IT industry and excel in their careers.",
         // missionImage: "https://t4.ftcdn.net/jpg/00/88/53/01/360_F_88530117_yIEF3FLZlxRPEdwgDLmTMH7fcdTnH7D6.jpg",
+        missionBackgroundColor: " rgb(251, 220, 236)", 
       }
     ],
 
@@ -99,6 +101,7 @@ export const sectionsData = {
         title: "Our Value",
         value: "At Nexus Corporate Training Center LLP, our values focus on a learner-centered approach, career success with 100% placement support, continuous improvement through feedback, and a collaborative, inclusive community for students and professionals alike.",
         // valueImage: "https://i.ytimg.com/vi/kr43VrFnOaE/maxresdefault.jpg",
+        valueBackgroundColor: " rgb(223, 229, 244)", 
       }
     ]
   },

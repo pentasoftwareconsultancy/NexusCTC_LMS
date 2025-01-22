@@ -61,26 +61,33 @@ body {
   color: orange; /* Highlight on hover */
 }
 
-.navbarLogin{
+.navbarLogin {
   margin-left: 40%;
   margin-top: -1px;
 }
-.navbarLoginLink{
+
+.navbarLoginLink {
   
 }
 
 /* Mobile view adjustments */
 @media screen and (max-width: 768px) {
+  .container {
+    justify-content: space-between; /* Align items properly on mobile */
+    padding: 10px; /* Add some padding to the navbar */
+  }
+
   .navbarList {
     display: none; /* Hide by default */
     flex-direction: column;
     background-color: white;
     position: absolute;
-    top: 100%; /* Place below the navbar */
+    top: 80px; /* Place below the navbar */
     left: 0;
     right: 0;
     z-index: 1000;
     border-top: 1px solid #ddd; /* Optional border */
+    padding: 10px 0;
   }
 
   .navbarListOpen {
@@ -92,7 +99,52 @@ body {
     cursor: pointer;
   }
 
+  .navbarLogin {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
   .btnHasBefore {
     display: none; /* Hide "Try for free" button in mobile */
+  }
+
+  /* Navbar Links */
+  .navbarLink {
+    font-size: 14px; /* Adjust font size for mobile */
+    padding: 12px 15px; /* Increase padding for better clickability */
+  }
+}
+
+/* Tablet view adjustments (between 768px and 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .navbarList {
+    gap: 15px; /* Adjust gap for better alignment */
+  }
+
+  .navbarLogin {
+    margin-left: 20%; /* Adjust margin on tablets */
+  }
+
+  .navbarLink {
+    font-size: 15px; /* Adjust font size for tablet */
+  }
+}
+
+/* Desktop and larger screens */
+@media screen and (min-width: 1024px) {
+  .navbarList {
+    gap: 25px; /* Add more gap on larger screens */
+  }
+
+  .navbarLogin {
+    margin-left: 40%; /* Keep the original margin */
+  }
+
+  .navbarLink {
+    font-size: 16px; /* Default font size for desktop */
+  }
+
+  .btnHasBefore {
+    display: block; /* Show the button on desktop */
   }
 }

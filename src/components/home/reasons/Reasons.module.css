@@ -12,8 +12,7 @@
 .reasons_r {
   position: relative;
   width: 50%;
-  /* Or any width that suits your design */
-
+  
 }
 
 /* Container for the two images to layer them */
@@ -67,7 +66,7 @@
 .reasons_l {
   width: 30%;
   /* Adjust this as needed */
-  margin-left: 10%;
+  margin-right: 5%;
 
 }
 
@@ -135,8 +134,9 @@
   font-size: 2.1rem;
 }
 
-p {
+.content p {
   color: grey;
+  text-align: justify;
   font-size: 1rem;
 }
 

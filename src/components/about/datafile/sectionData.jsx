@@ -97,7 +97,7 @@ export const sectionsData = {
     Value: [
       {
         title: "Our Value",
-        vision: "At Nexus Corporate Training Center LLP, our values focus on a learner-centered approach, career success with 100% placement support, continuous improvement through feedback, and a collaborative, inclusive community for students and professionals alike.",
+        value: "At Nexus Corporate Training Center LLP, our values focus on a learner-centered approach, career success with 100% placement support, continuous improvement through feedback, and a collaborative, inclusive community for students and professionals alike.",
         // valueImage: "https://i.ytimg.com/vi/kr43VrFnOaE/maxresdefault.jpg",
       }
     ]

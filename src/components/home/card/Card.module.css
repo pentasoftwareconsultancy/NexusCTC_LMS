@@ -4,8 +4,8 @@
 .card_container {
     font-family: "Poppins", serif;
     background-color: white;
-    padding: 50px 0; /* Added padding for some space around the card section */
-    text-align: center; /* Center all content */
+    padding: 50px 20px; /* Responsive padding */
+    text-align: center;
 }
 
 /* Heading styling */
@@ -13,17 +13,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 100px; /* Reduced padding for better alignment */
-    margin-bottom: 50px; /* Added space below the heading */
+    padding-top: 80px; /* Optimized padding */
+    margin-bottom: 40px; /* Adjusted spacing */
 }
 
 .heading div {
-    margin: 10px 0; /* Add space between each div element */
+    margin: 10px 0;
 }
 
 /* First heading (category) style */
 .heading div:nth-child(1) {
-    color: rgb(233, 56, 56); /* Red color */
+    color: rgb(233, 56, 56);
     font-size: 1rem;
 }
 
@@ -39,111 +39,110 @@
     color: grey;
     padding: 10px;
     font-size: 18px;
+    max-width: 800px;
 }
 
 /* Flexbox layout for the card data section */
 .carddata {
     display: flex;
-    justify-content: center; /* Center cards horizontally */
-    align-items: stretch; /* Stretch items to the same height */
-    gap: 2rem; /* Space between the cards */
-    padding:20px 100px; /* Added padding for better spacing */
+    justify-content: center; 
+    flex-wrap: wrap;
+    gap: 1rem; 
+    padding: 20px 50px; 
 }
 
 /* Card styling */
 .card {
-    background-color: antiquewhite;
     text-align: center;
-    padding: 20px 25px; /* Added padding for card content */
-    width: 200px; /* Set a fixed width for the card */
-    border-radius: 10px; /* Added rounded corners for a clean look */
-    height: 350px;
-    justify-content: center;
-    background-color:rgb(253, 250, 209)
+    padding: 25px;
+    width: 100%;
+    max-width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Styling for card images  */
-.cardImage{
-        
+/* Hover effect for cards */
+.card:hover {
+    transform: translateY(-5px);
 }
 
-.courses{
-    border-radius: 5px;
-    padding: 5px 5px;
+/* Card Image Styling */
+.cardImage .courses {
+    text-align: justify;
+    padding: 5px;
     width: 100px;
-    margin-left: 40px;
-    
-    
+    margin: 20px auto; /* Center images */
+    display: block;
+    margin-top: 30px;
 }
 
+.courses {
+    margin-top: 20%;
+    border-radius: 5px;
+    padding: 10px;
+}
 
 /* Heading in the card (h3) styling */
 .card h3 {
     font-size: 1.5rem;
-    
+    color: #333;
+    margin: 15px 0;
 }
 
 /* Details text in the card (p) styling */
 .card p {
-    margin-top: 30px;
-    font-size: 15px;
-    
-}
-.div{
-   margin-top: 100px;
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #666;
 }
 
-
-
-
-@media screen and (max-width: 768px) {
-    /* Card Data Layout */
+/* Responsive Design */
+@media (max-width: 1200px) {
     .carddata {
-        display: flex;
-        flex-direction: column; /* Stack items vertically */
-        gap: 1.5rem; /* Space between items */
-        align-items: center; /* Center align items */
-        justify-content: flex-start; /* Adjust positioning */  
-        
-      
+        padding: 20px 30px;
     }
-
-    /* Card Image */
-    .cardImage {
-        width: 20%; /* Scale the image within the card */
-        height: auto; /* Maintain aspect ratio */
-        max-height: 150px; /* Limit height for mobile */
-        object-fit: cover; /* Make sure image covers its container without distortion */
-        margin-bottom: 10px; /* Add space below the image */
-    }
-
-    /* Card Styling */
     .card {
-        width: 90%; /* Make the card width responsive */
-        height: 50%; /* Allow height to adjust based on content */
-        max-width: 350px; /* Limit the maximum width */
-        padding: 15px 20px; /* Adjust padding */
-        
-    }
-
-    /* Heading Adjustments */
-    .heading {
-        margin-top: 40%; /* Adjust top margin */
-        text-align: center; /* Ensure the text is centered */
-    }
-
-    .heading div:nth-child(1) {
-        font-size: 4vw; /* Scale font size based on viewport width */
-    }
-
-    .heading div:nth-child(2) {
-        font-size: 6vw; /* Adjust font size for the second heading */
-        margin-top: -10px;
-    }
-
-    .heading div:nth-child(3) {
-        font-size: 15px;
-        margin-top: -10px;
+        max-width: 260px;
     }
 }
 
+@media (max-width: 992px) {
+    .heading div:nth-child(2) {
+        font-size: 2rem;
+    }
+    .heading div:nth-child(3) {
+        font-size: 16px;
+    }
+    .carddata {
+        padding: 20px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .heading div:nth-child(2) {
+        font-size: 1.8rem;
+    }
+    .carddata {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .heading div:nth-child(2) {
+        font-size: 1.6rem;
+    }
+    .heading div:nth-child(3) {
+        font-size: 14px;
+    }
+    .carddata {
+        padding: 10px;
+    }
+    .card {
+        max-width: 100%;
+    }
+}

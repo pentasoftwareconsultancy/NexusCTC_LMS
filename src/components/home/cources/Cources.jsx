@@ -49,11 +49,11 @@ function Cources() {
                 {CourcesData.map((course, index) => (
                     <div key={index} className={styles.course_card}>
                         {/* Image Section */}
-                        <div className={styles.time}><FiClock /> {course.time}</div>
+                        <div className={styles.time}> {course.time}</div>
                         <img src={course.image} className={styles.image} alt={course.type} />
 
                         {/* Course Info */}
-                        <h3>{course.type}</h3>
+                        {/* <h3>{course.type}</h3> */}
                         <p>{course.details}</p>
 
                         {/* Rating */}

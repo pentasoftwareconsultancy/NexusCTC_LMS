@@ -9,12 +9,97 @@
 /* Container styling */
 .visionMissionContainer {
   max-width: 1200px;
-  background-color: aqua;
+  /* background-color: aqua; */
   margin: 0 auto;
   padding: 40px 20px;
   text-align: center;
-  font-family: Arial, sans-serif;
 }
+
+.vissionmissionvalue{
+  float: left;
+  margin-top: 18%;
+  margin-left: 70px;
+  background-color: #fadebc;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  text-align: center;
+  border: 5px solid rgb(250, 165, 6);
+}
+.Vissionmissionvaluecontent{
+  margin-top: 40px;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(79, 79, 78);
+}
+
+/* Curve line styles */
+.curveLineWrapper {
+  float: left;
+  margin-top:10%; /* Space between the VISION MISSION VALUE and curve line */
+}
+
+.curveLine {
+ /* background-color: #f0890b; */
+ 
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+  width: 1%;
+  
+  /* justify-content: space-between; */
+  list-style: none;
+  margin-left:100px;
+}
+
+/* Right and Middle classes for line rotation */
+.right .curveLine {
+  transform: translateX(-30px) rotate(60deg); /* Adjust the rotation to create the curve */
+}
+
+.middle .curveLine {
+  transform: translateX(-10px) rotate(-30deg); /* Adjust the rotation to curve the line */
+}
+
+.curveLine li {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: #f0890b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+/* Line styling */
+.line {
+  position: absolute;
+  width: 50px;  /* Length of the line */
+  height: 2px;  /* Thickness of the line */
+  background-color: #f0890b;  /* Line color */
+  top: 50%;  /* Center vertically with the dot */
+  left: 100%; /* Position the line to the right of the dot */
+  z-index: 1; /* Ensure the line is behind the dot */
+}
+.curveLine li span {
+  /* position: absolute; */
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px rgb(242, 213, 160) solid;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.right {
+  transform: translateX(-60px);
+}
+
+.middle {
+  transform: translateX(-10px);
+}
+
 
 /* Vision-Mission image styling */
 .visionMissionImage img {
@@ -28,16 +113,26 @@
   -webkit-filter: blur(2px);
 
 }
+.valueSection{
+  margin-left: 40%;
+}
+.visionSection{
+  margin-left: 40%;
+}
+.missionSection{
+  margin-left: 50%;
+}
 
 /* Section common styling */
 .visionSection, 
 .missionSection, 
 .valueSection {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+ 
   padding: 20px;
   background: #fdf1df;
-  width: 30%;
-  /* border-left: 5px solid #007bff; */
+  width: 50%;
+  border-right: 5px solid #f0890b;
   border-radius: 100px;
   box-shadow: 10px 6px 8px rgba(0, 0, 0, 0.1);
 }
@@ -64,6 +159,10 @@
   margin-top: 15px;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sectionContent{
+  cursor: pointer;
 }
 
 /* Responsive styles */

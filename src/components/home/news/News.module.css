@@ -22,7 +22,7 @@
 .news_details{
     background-color: white;
     position: absolute; 
-    transform: translate(5%, -50%);  
+    transform: translate(10%, -50%);  
     width: 20%;
     z-index: 2;  
     border-radius: 10px;

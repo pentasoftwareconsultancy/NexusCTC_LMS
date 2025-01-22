@@ -90,16 +90,26 @@
 }
 
 .type {
-  font-weight: normal;
-  font-size: 15px;
-  /* background-color: rgb(244, 235, 204); */
-  width: 100%;
-  display: flex;
-  /* padding: 5px; */
-  border-radius: 5px;
-  margin-top: 10px;
-  color: rgb(86, 86, 84);
-  /* justify-content: center; */
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;  /* Show only 2 lines initially */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px;  /* Adjust width as needed */
+  cursor: pointer;
+  /* transition: all 0.3s ease-in-out; */
+  position: relative;
+}
+/* When expanded, show full content */
+.type.expanded {
+  -webkit-line-clamp: unset; /* Remove line limit */
+  overflow: visible;
+  text-overflow: unset;
+  max-width: 100%;
+  cursor: default;
 }
 
 .heading {

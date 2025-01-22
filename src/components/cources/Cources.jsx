@@ -1,60 +1,57 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FaStar, FaRegStar } from 'react-icons/fa'; // Importing the icons for filled and unfilled stars
-import { IoLibraryOutline,IoPeopleOutline  } from "react-icons/io5";
-import { OurCources } from '../../OurCources';  // Path to the file containing the course data
-import styles from './Cources.module.css'; // Assuming you have a corresponding CSS module for styles
-import ScrollToTop from '../Scrolltop';  // Import ScrollToTop component
+import { FaStar, FaRegStar } from 'react-icons/fa'; 
+import { IoLibraryOutline, IoPeopleOutline } from "react-icons/io5";
+import { OurCources } from '../../OurCources';  
+import styles from './Cources.module.css'; 
+import ScrollToTop from '../Scrolltop';  
 
+// Component for expandable course type text
+const CourseType = ({ type }) => {
+  const [expanded, setExpanded] = useState(false);
+
+  return (
+    <div 
+      className={`${styles.type} ${expanded ? styles.expanded : ''}`}  
+      onClick={() => setExpanded(!expanded)} 
+      title={!expanded ? type : ''}
+    >
+      {type}
+      {!expanded && <span className={styles.read_more}>Read More</span>}
+    </div>
+  );
+};
 
 // Cources Component
 function Cources() {
-  const location = useLocation();  // Use useLocation hook to get the current path
+  const location = useLocation();  
   
-  // Scroll to top on route change
   useEffect(() => {
-    window.scrollTo(0, 0);  // Scroll to top on mount or route change
+    window.scrollTo(0, 0);  
   }, [location]);
 
   return (
-    
     <div className={styles.courses_container}>
-      {/* ScrollToTop component to ensure it works on route change */}
       <ScrollToTop />
-
-     
-
-      {/* Header Section */}
+      
       <div className={styles.head}>
         <h1>We Offer the Following Courses</h1>
         <p>Best Software training institute in Pune and certification provider offers professional training across India. Advance your career today!</p>
       </div>
 
-      {/* Course Details Section */}
       <div className={styles.details}>
         {OurCources.map((course, index) => (
           <div key={index} className={styles.course_card}>
-            {/* Time Section */}
             <div className={styles.time}>{course.time}</div>
-            
-            {/* Image Section */}
             <img src={course.image} alt={course.heading} className={styles.course_image} />
 
             <div className={styles.content}>
-             
-              {/* Course Info */}
               <div className={styles.heading}>{course.heading}</div>
+              <CourseType type={course.type} />
 
-               {/* Type Section */}
-               <div className={styles.type}>{course.type}</div>
-
-              {/* Rating Stars */}
               <div className={styles.rating}>
                 {Array.from({ length: 5 }, (_, i) => (
-                  // Fill the star if the index is less than the rating
                   i < Math.floor(course.rating) ? (
-                    <FaStar key={i} />
-                  ) : i < course.rating ? (
                     <FaStar key={i} />
                   ) : (
                     <FaRegStar key={i} />
@@ -63,19 +60,19 @@ function Cources() {
                 <p>{course.rating}</p>
               </div>
 
-              {/* Price */}
               <div className={styles.price}>{course.price}</div>
 
-              {/* Lessons & Students */}
               <div className={styles.studlesson}>
-                <div className={styles.lesson}> <IoLibraryOutline color='grey' />{course.lesson}</div>
-                <div className={styles.students}><IoPeopleOutline color='grey' />{course.students}</div>
-                {/* Button */}
+                <div className={styles.lesson}> 
+                  <IoLibraryOutline color='grey' />{course.lesson}
+                </div>
+                <div className={styles.students}>
+                  <IoPeopleOutline color='grey' />{course.students}
+                </div>
 
                 <Link to={`/course/${course.id}`}>
-                <button className={styles.learn_more_button}>{course.button}</button>
+                  <button className={styles.learn_more_button}>{course.button}</button>
                 </Link>
-                
               </div>
             </div>
           </div>

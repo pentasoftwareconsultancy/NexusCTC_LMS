@@ -1,163 +1,138 @@
-/* WhyChooseUs.module.css */
-
-/* WhyChooseUs.module.css */
-
-.whyChooseUsSection {
-  padding: 10rem;
-  text-align: center;
-  background-color: rgb(254, 240, 222);
-}
-
-.WhyChooseUs {
+/* Container styles */
+.whyChooseUsContainer {
   display: flex;
-  gap: 2rem; /* Adds space between content blocks */
-  justify-content: center; /* Centers the blocks horizontally */
-  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  flex-wrap: wrap;
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  gap: 30px;
+  padding-left: 10rem;
+  padding-right: 10rem;
+
+  /* padding: 60px 20px; */
+  background: #d8ebf9;
+  text-align: center;
 }
 
-.sectionTitle {
-  font-size: 2.5rem;
+/* Individual card styles */
+.whyChooseUsItem {
+  
+  background: linear-gradient(135deg, #0077b6 0%, #00a6fb 100%);
+  padding: 30px;
+  border-radius: 15px;
+  width: 48%;
+  
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  color: white;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effect */
+.whyChooseUsItem:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Animated overlay effect */
+.whyChooseUsItem::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: all 0.6s ease;
+}
+
+.whyChooseUsItem:hover::before {
+  top: 10px;
+  left: 10px;
+  width: 200px;
+  height: 200px;
+}
+
+/* Text styling */
+.whyChooseUsItem p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.content{
   font-weight: bold;
-  color: #333;
-  margin-bottom: 1.5rem;
+  font-size: larger;
 }
 
-.contentBlock {
-  background-color: #fff;
-  border-radius: 5px;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  flex-basis: 30%; /* Adjust based on how you want to distribute the space */
-  overflow: hidden;
+.whyChooseUsItem strong {
+  font-size: 28px;
+  font-weight: bold;
+  display: block;
 }
 
-/* Optional: Add zoom effect on hover */
-.contentBlock:hover .image {
-  transform: scale(1.1); /* Zooms in the image */
-  transition-duration: 1s;
-}
-
-.contentBlock:active .image {
-  transform: scale(0.95); /* Zooms out on click */
-  overflow: hidden;
-}
-
+/* Heading styles */
 .heading {
-  font-size: 20px;
-  font-weight: bold;
-  color: #444;
-  margin-top: 20px;
-  /* margin-bottom: 1rem; */
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  color: #0077b6;
+  margin-bottom: 40px;
+  position: relative;
 }
 
-.stars {
-  font-size: 1.5rem;
-  color: #f39c12;
+/* Underline effect for heading */
+.heading::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #00a6fb;
+  margin: 10px auto 0;
+  border-radius: 5px;
 }
 
-.description {
-  font-size: 1rem;
-  color: #666;
-  line-height: 1.5;
-  text-align: justify;
-  padding: 10px;
-  margin-top: -5px;
-}
-
-.image {
-  width: 100%;
-  height: 50%;
-}
-
-/* Media Queries for Responsiveness */
-
-/* For large screens (desktops, laptops) */
-@media (max-width: 1200px) {
-  .sectionTitle {
-      font-size: 2.2rem; /* Adjust size for larger tablets and small desktops */
-  }
-
-  .contentBlock {
-      flex-basis: 45%; /* Decrease content block width for larger tablets */
-  }
-}
-
-/* For medium screens (tablets and small desktops) */
+/* Responsive design */
 @media (max-width: 768px) {
-  .sectionTitle {
-      font-size: 2rem; /* Adjust title size for tablets */
-      margin-bottom: 1rem; /* Reduced margin for better space utilization */
+  .whyChooseUsContainer {
+    grid-template-columns: 1fr;
   }
 
-  .WhyChooseUs {
-      flex-direction: column;
-      gap: 2rem;
+  .whyChooseUsItem {
+    padding: 20px;
   }
 
-  .contentBlock {
-      flex-basis: 80%; /* Use more width on smaller screens */
-      margin-bottom: 1.5rem; /* Reduced space between blocks */
+  .heading {
+    font-size: 32px;
   }
 
-  .image {
-      height: 60%; /* Adjust image height for tablets */
+  .whyChooseUsItem p {
+    font-size: 16px;
+  }
+
+  .whyChooseUsItem strong {
+    font-size: 24px;
   }
 }
 
-/* For small screens (mobile phones) */
 @media (max-width: 480px) {
-  .sectionTitle {
-      font-size: 1.8rem; /* Smaller title for mobile */
-      margin-bottom: 1rem;
-  }
-
-  .WhyChooseUs {
-      gap: 1rem; /* Reduced gap for better space usage */
-  }
-
-  .contentBlock {
-      flex-basis: 100%; /* Content blocks take full width on mobile */
-      margin-bottom: 1rem;
+  .whyChooseUsItem {
+    padding: 15px;
   }
 
   .heading {
-      font-size: 1.4rem; /* Adjust heading font size for mobile */
+    font-size: 28px;
   }
 
-  .stars {
-      font-size: 1.3rem; /* Adjust stars size for mobile */
+  .whyChooseUsItem p {
+    font-size: 14px;
   }
 
-  .description {
-      font-size: 1rem; /* Reduced description text for mobile */
-      line-height: 1.4;
-  }
-
-  .image {
-      height: 40%; /* Adjust image height for smaller screens */
-  }
-}
-
-/* For extra small screens (very small mobile devices) */
-@media (max-width: 375px) {
-  .sectionTitle {
-      font-size: 1.6rem; /* Further reduce font size for very small screens */
-  }
-
-  .contentBlock {
-      flex-basis: 100%; /* Full width for content blocks */
-      padding: 1rem; /* Adjust padding to ensure readability */
-  }
-
-  .heading {
-      font-size: 1.2rem; /* Smaller heading for small mobile */
-  }
-
-  .description {
-      font-size: 0.9rem; /* Slightly smaller description text */
-  }
-
-  .image {
-      height: 35%; /* Adjust image height for very small mobile devices */
+  .whyChooseUsItem strong {
+    font-size: 22px;
   }
 }

@@ -18,7 +18,7 @@
 .vissionmissionvalue{
   float: left;
   margin-top: 18%;
-  margin-left: 70px;
+  margin-left: 30px;
   background-color: #fbe9d4;
   height: 200px;
   width: 200px;
@@ -114,13 +114,13 @@
 
 }
 .valueSection{
-  margin-left: 40%;
+  margin-left: 35%;
 }
 .visionSection{
-  margin-left: 40%;
+  margin-left:35%;
 }
 .missionSection{
-  margin-left: 50%;
+  margin-left: 45%;
 }
 
 /* Section common styling */
@@ -128,7 +128,6 @@
 .missionSection, 
 .valueSection {
   margin-bottom: 20px;
- 
   padding: 20px;
   background: #fdf1df;
   width: 50%;

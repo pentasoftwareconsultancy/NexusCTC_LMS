@@ -18,11 +18,15 @@ import GuestExam from './components/guestexam/GuestExam';
 import GallaryPage from './pages/GallaryPage';
 import ImageDetail from './components/gallary/imagedetail/ImageDetail';
 import Footer from './components/footer/Footer';
+import ScrollToTop from './components/Scrolltop';
 
 function App() {
+
+  
   return (
     <>
       <Navbar />
+      <ScrollToTop/>
       
       <Routes>
         <Route path="/" element={<HomePage />} />

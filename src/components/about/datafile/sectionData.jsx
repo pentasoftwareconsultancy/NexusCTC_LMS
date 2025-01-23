@@ -1,4 +1,10 @@
 // sectionsData.js
+
+import { BiSolidHappy } from "react-icons/bi";
+import { FaThumbsUp } from "react-icons/fa";
+import { BsJournalRichtext } from "react-icons/bs";
+import { LiaIndustrySolid } from "react-icons/lia";
+
 export const sectionsData = {
   heroSection: {
     // videoUrl: 'https://v.ftcdn.net/01/44/48/54/700_F_144485402_GCjV0x5TXlukewbLYyDge7Bb01f7hQ5n_ST.mp4', 
@@ -108,24 +114,46 @@ export const sectionsData = {
 
   WhyChooseUs: [
     {
-      image: "https://media.licdn.com/dms/image/v2/D4E12AQE9PynghwnfBA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1703624413744?e=2147483647&v=beta&t=flmY42TR1WDPtydBudSjguuucBXVawcu5ijGOgSA8bA",
-      heading: "Extensive Industry Experience",
-      stars: "★★★★★",
+      // image: "https://media.licdn.com/dms/image/v2/D4E12AQE9PynghwnfBA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1703624413744?e=2147483647&v=beta&t=flmY42TR1WDPtydBudSjguuucBXVawcu5ijGOgSA8bA",
+      // heading: "Extensive Industry Experience",
+      // stars: "★★★★★",
+      WhyChooseUsLogo:<FaThumbsUp size={70}/>,
+      student_counting:"12+",
+      content:"year of indusrty experience",
       description:
         "We have over 20 years of experience providing high-quality corporate training solutions across various industries, helping companies enhance employee skills and productivity.",
     },
 
     {
-      image: "https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/c1a0b8c4-aa4f-42aa-8b5a-aa723dabc7f6/95279c53-ae4c-44a8-9b72-e9850dcc4143.png",
-      heading: "Customized Training Programs",
-      stars: "★★★★★",
+      // image: "https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/c1a0b8c4-aa4f-42aa-8b5a-aa723dabc7f6/95279c53-ae4c-44a8-9b72-e9850dcc4143.png",
+      // heading: "Customized Training Programs",
+      // stars: "★★★★★",
+      
+      WhyChooseUsLogo:<BiSolidHappy size={70} />,
+      student_counting:"700+",
+      content:"Happy Clients",
       description: "Our training programs are tailored to meet the specific needs of your organization, ensuring that your employees gain the most relevant and impactful skills.",
     },
 
     {
-      image: "https://media.licdn.com/dms/image/D4D12AQFXf7wr7dGDpQ/article-cover_image-shrink_720_1280/0/1705431516441?e=2147483647&v=beta&t=u2I9cw0zwgM2hecJX0Y_HbFdwhY2n3PUZCTuB4rFjNc",
-      heading: "Certified and Experienced Trainers",
-      stars: "★★★★★",
+      // image: "https://media.licdn.com/dms/image/D4D12AQFXf7wr7dGDpQ/article-cover_image-shrink_720_1280/0/1705431516441?e=2147483647&v=beta&t=u2I9cw0zwgM2hecJX0Y_HbFdwhY2n3PUZCTuB4rFjNc",
+      // heading: "Certified and Experienced Trainers",
+      // stars: "★★★★★",
+
+      WhyChooseUsLogo:<BsJournalRichtext size={70}/>,
+      student_counting:"800+",
+      content:"Project Done",
+      description: "Our trainers are industry experts with certifications and hands-on experience in their respective fields, ensuring top-notch training quality.",
+    },
+
+    {
+      // image: "https://media.licdn.com/dms/image/D4D12AQFXf7wr7dGDpQ/article-cover_image-shrink_720_1280/0/1705431516441?e=2147483647&v=beta&t=u2I9cw0zwgM2hecJX0Y_HbFdwhY2n3PUZCTuB4rFjNc",
+      // heading: "Certified and Experienced Trainers",
+      // stars: "★★★★★",
+
+      WhyChooseUsLogo:<LiaIndustrySolid size={70} />,
+      student_counting:"40+",
+      content:"year of indusrty experience",
       description: "Our trainers are industry experts with certifications and hands-on experience in their respective fields, ensuring top-notch training quality.",
     },
   ],

@@ -28,6 +28,9 @@ export const OurCources = [
     lesson:"15 lesson",
     students:"35 students",
     button: "Learn More",
+    
+    purchased: false,  // Set to false to simulate not purchased
+    introVideo: "https://www.youtube.com/embed/some-video-id", // Add intro video URL
 
 
     CourceImage: "https://www.theiceway.com/hubfs/Why%20is%20Software%20Testing%20So%20Important.jpg",

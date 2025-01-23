@@ -1,6 +1,6 @@
 .LoginContainer {
     display: flex;
-    height: 89vh; /* Full viewport height */
+    height: 90vh; /* Full viewport height */
     background-color:white;
     
   }
@@ -158,6 +158,36 @@
     color: rgb(37, 36, 36);
 }
 
+/*popup*/
+.signInSuccess{
+    color: navy;
+    font-weight: bold;
+    font-size: 30px;
+}
+.logindropdownButton{
+    color: navy;
+    font-size: 40px;
+    border-color: #3d76b3;
+    padding-top: 0px;
+}
+.logindropdownButton:hover{
+  background-color: #d0d0db;
+}
+.dropdownItem{
+ margin-bottom: 20px;
+ margin-top: 10px;
+ width: 100%;
+ border-radius: 5px;
+ height: 50px;
+ padding: 10px;
+ font-size: 20px;
+ font-weight: bold;
+ color: #555;
+  background-color: #d9f4ef;
+  cursor: pointer;
+
+}
+
 .GoogleLogin, .PhoneLogin {
     margin-top: 10px;
     text-align: center;
@@ -201,24 +231,22 @@
 }
 
 .orline {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
 }
 
 .line {
-    flex: 1;
-    height: 1px;
-    background-color: #ccc; /* Light grey color for the line */
+  flex: 1;
+  border-top: 1px solid #000;
 }
 
 .orText {
-    padding: 0 10px;
-    font-size: 1rem;
-    color: #555;
+  margin: 0 10px;
+  font-weight: bold;
+  color: #000;
 }
-
 
   /* Responsive Design */
   @media screen and (max-width: 768px) {

@@ -11,18 +11,18 @@ import Blog from './components/blog/Blog';
 import ContactPage from './pages/ContactPage';
 import CourcesPage from './pages/CourcesPage';
 import LoginPage from './pages/LoginPage';
-import StartExam from './components/cources/exam/startexam/StartExam';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import StartExam from './components/cources/exam/startexam/StartExam';
 import GuestExamPage from './pages/GuestExamPage';
 import GuestExam from './components/guestexam/GuestExam';
 import GallaryPage from './pages/GallaryPage';
 import ImageDetail from './components/gallary/imagedetail/ImageDetail';
 import Footer from './components/footer/Footer';
 import ScrollToTop from './components/Scrolltop';
+import NotLoggedInPage from './pages/NotLoggedInPage'
+
 
 function App() {
-
-  
   return (
     <>
       <Navbar />
@@ -33,19 +33,27 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         {/* <Route path="/cources" element={<Cources />} /> */}
         <Route path="/cources" element={<CourcesPage />} />
+
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="/course/:id" element={<LearnMore />} />  {/* Dynamic route for LearnMore page */}
+
+      
+        <Route path="/course/:id" element={<PrivateRoute><LearnMore /></PrivateRoute>} />
+
         <Route path="/blog" element={<Blog />} />
         {/* <Route path="/blog/:id" element={<BlogLearnMore />} />  Dynamic route for BlogLearnMore page */}
         <Route path="/login" element={<LoginPage />} />
         <Route path="/startexam/:id" element={
-          <PrivateRoute>
+          // <PrivateRoute>
             <StartExam />
-          </PrivateRoute>
+          // </PrivateRoute>
         } />
         <Route path="/guestexam" element={<GuestExamPage />} />
         <Route path="/gallary" element={<GallaryPage />} />
         <Route path="/image/:id" element={<ImageDetail />} /> {/* Fixed issue */}
+        <Route path="/notloggedin/:id" element={<NotLoggedInPage />} />
+
+     
+
       </Routes>
 
       <Footer/>

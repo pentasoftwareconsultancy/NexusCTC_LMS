@@ -7,9 +7,14 @@ function Lectures({ lectures }) {
   const [activeVideos, setActiveVideos] = useState({});
   const [watchedLectures, setWatchedLectures] = useState({});
 
+  // Check if the lectures prop is valid
+  if (!lectures || !Array.isArray(lectures)) {
+    return <div className={styles.error}>No lectures available.</div>;
+  }
+
   const toggleModule = (index) => {
     setActiveModuleIndex(activeModuleIndex === index ? null : index);
-    setActiveVideos({});
+    setActiveVideos({}); // Reset active videos when a new module is toggled
   };
 
   const selectVideo = (moduleIndex, videoLink, lectureIndex) => {
@@ -19,14 +24,14 @@ function Lectures({ lectures }) {
     }));
     setWatchedLectures((prevState) => ({
       ...prevState,
-      [`${moduleIndex}-${lectureIndex}`]: false,
+      [`${moduleIndex}-${lectureIndex}`]: false, // Reset watched state for new video
     }));
   };
 
   const markVideoAsWatched = (moduleIndex, lectureIndex) => {
     setWatchedLectures((prevState) => ({
       ...prevState,
-      [`${moduleIndex}-${lectureIndex}`]: true,
+      [`${moduleIndex}-${lectureIndex}`]: true, // Mark video as watched
     }));
   };
 

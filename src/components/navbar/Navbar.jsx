@@ -16,6 +16,11 @@ const Navbar = ({ loggedIn, setLoggedIn }) => {
         navigate('/login');  // Redirect to login page after logout
     };
 
+    // Function to close menu after clicking a navbar item
+    const closeMenu = () => {
+        setMenuOpened(false);
+    };
+
     return (
         <div className={styles.container}>
             {mobile && (
@@ -28,13 +33,13 @@ const Navbar = ({ loggedIn, setLoggedIn }) => {
             )}
             <nav className={styles.Navbar}>
                 <ul className={`${styles.navbarList} ${menuOpened ? styles.navbarListOpen : ''}`}>
-                    <li className={styles.navbarItem}><Link to="/" className={styles.navbarLink}>Home</Link></li>
-                    <li className={styles.navbarItem}><Link to="/about" className={styles.navbarLink}>About</Link></li>
-                    <li className={styles.navbarItem}><Link to="/cources" className={styles.navbarLink}>Courses</Link></li>
-                    <li className={styles.navbarItem}><Link to="/blog" className={styles.navbarLink}>Blog</Link></li>
-                    <li className={styles.navbarItem}><Link to="/guestexam" className={styles.navbarLink}>Exam</Link></li>
-                    <li className={styles.navbarItem}><Link to="/gallary" className={styles.navbarLink}>Gallery</Link></li>
-                    <li className={styles.navbarItem}><Link to="/contact" className={styles.navbarLink}>Contact</Link></li>
+                    <li className={styles.navbarItem}><Link to="/" className={styles.navbarLink} onClick={closeMenu}>Home</Link></li>
+                    <li className={styles.navbarItem}><Link to="/about" className={styles.navbarLink} onClick={closeMenu}>About</Link></li>
+                    <li className={styles.navbarItem}><Link to="/cources" className={styles.navbarLink} onClick={closeMenu}>Courses</Link></li>
+                    <li className={styles.navbarItem}><Link to="/blog" className={styles.navbarLink} onClick={closeMenu}>Blog</Link></li>
+                    <li className={styles.navbarItem}><Link to="/guestexam" className={styles.navbarLink} onClick={closeMenu}>Exam</Link></li>
+                    <li className={styles.navbarItem}><Link to="/gallary" className={styles.navbarLink} onClick={closeMenu}>Gallery</Link></li>
+                    <li className={styles.navbarItem}><Link to="/contact" className={styles.navbarLink} onClick={closeMenu}>Contact</Link></li>
 
                     {loggedIn || isLoggedIn ? (
                         <li className={styles.profileContainer}>
@@ -44,13 +49,13 @@ const Navbar = ({ loggedIn, setLoggedIn }) => {
                             />
                             {showDropdown && (
                                 <div className={styles.dropdownMenu}>
-                                    <div className={styles.dropdownItem}><Link to="/profile">Profile</Link></div>
+                                    <div className={styles.dropdownItem}><Link to="/profile" onClick={closeMenu}>Profile</Link></div>
                                     <div className={styles.dropdownItem} onClick={handleLogout}>Logout</div>
                                 </div>
                             )}
                         </li>
                     ) : (
-                        <li className={styles.navbarItem}><Link to="/login" className={styles.navbarLink}>Login</Link></li>
+                        <li className={styles.navbarItem}><Link to="/login" className={styles.navbarLink} onClick={closeMenu}>Login</Link></li>
                     )}
                 </ul>
             </nav>

@@ -5,56 +5,65 @@
   flex-direction: column;
   gap: 30px;
   padding: 20px;
-  overflow: hidden; /* Hide overflowing content */
-  margin-left: 150px; /* Reduced margin for responsiveness */
-  margin-right: 150px; /* Reduced margin for responsiveness */
+  overflow: hidden;
+  margin-left: 150px;
+  margin-right: 150px;
+  position: relative;
 }
 
+/* Heading */
 .OurPartnerHeading {
   text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
-  background: linear-gradient(90deg, #f59817, #ea6507); /* Gradient colors */
+  background: linear-gradient(90deg, #f59817, #ea6507);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 30px;
   letter-spacing: 2px;
 }
 
+/* Row Container */
+.slider-wrapper {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
 /* Row styling */
 .row {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   gap: 20px;
-  width: 100%; /* Ensure the row takes the full width */
   flex-wrap: nowrap;
+  white-space: nowrap; /* Prevent wrapping */
+  animation: scrollLeft 15s linear infinite; /* Smooth and continuous */
 }
 
-/* Row 1 - Left side sliding */
-.row-left {
-  animation: scrollSliderLeft 30s linear infinite; /* Infinite left sliding */
-}
-
-@keyframes scrollSliderLeft {
-  0% {
-    transform: translateX(0); /* Start at the left */
-  }
-  100% {
-    transform: translateX(-100%); /* Move all the way to the left */
-  }
-}
-
-/* Row 2 - Right side sliding */
+/* Duplicate row for infinite sliding */
 .row-right {
-  animation: scrollSliderRight 30s linear infinite; /* Infinite right sliding */
+  animation: scrollRight 15s linear infinite;
 }
 
-@keyframes scrollSliderRight {
-  0% {
-    transform: translateX(0); /* Start at the right */
+/* Keyframes for continuous left sliding */
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
   }
-  100% {
-    transform: translateX(100%); /* Move all the way to the right */
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Keyframes for continuous right sliding */
+@keyframes scrollRight {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
   }
 }
 
@@ -66,14 +75,14 @@
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect for smooth transformation */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Partner image styling */
 .partner img {
   width: 100%;
   height: 80%;
-  object-fit: contain; /* Make images fit inside without cropping */
+  object-fit: contain;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
@@ -84,9 +93,10 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Design */
-/* Responsive Design */
 
+/* ------------- RESPONSIVE DESIGN ------------- */
+
+/* Large Screens (Desktops & Laptops) */
 @media (max-width: 1200px) {
   .ourPartnersContainer {
     margin-left: 50px;
@@ -97,16 +107,13 @@
     font-size: 2rem;
   }
 
-  .row {
-    gap: 15px;
-  }
-
   .partner {
     width: 130px;
     height: 90px;
   }
 }
 
+/* Medium Screens (Tablets) */
 @media (max-width: 992px) {
   .ourPartnersContainer {
     margin-left: 20px;
@@ -118,7 +125,7 @@
   }
 
   .row {
-    gap: 10px;
+    gap: 15px;
   }
 
   .partner {
@@ -127,6 +134,7 @@
   }
 }
 
+/* Small Screens (Mobile) */
 @media (max-width: 768px) {
   .ourPartnersContainer {
     margin-left: 10px;
@@ -139,15 +147,16 @@
   }
 
   .row {
-    gap: 5px;
+    gap: 10px;
   }
 
   .partner {
-    width: 110px;
+    width: 100px;
     height: 70px;
   }
 }
 
+/* Extra Small Screens (Phones) */
 @media (max-width: 576px) {
   .ourPartnersContainer {
     margin-left: 5px;
@@ -160,11 +169,10 @@
 
   .row {
     gap: 5px;
-    flex-direction: column; /* Stack the items vertically on small screens */
   }
 
   .partner {
-    width: 100%;
+    width: 90px;
     height: 60px;
   }
 }

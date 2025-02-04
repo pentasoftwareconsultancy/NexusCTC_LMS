@@ -218,7 +218,8 @@
   .learn_more_button {
     width: 100%;
     padding: 14px;
-    margin-top: 15px;
+    margin-top: 20px;
+    margin-right: 10px;
   }
 
   .content {
@@ -237,6 +238,10 @@
   .time {
     transform: translate(320%, 35%); /* Adjust time position on mobile */
   }
+  .students,
+.lesson {
+  margin-bottom: 10px;
+}
 }
 
 @media screen and (max-width: 480px) {

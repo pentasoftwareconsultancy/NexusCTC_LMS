@@ -51,22 +51,44 @@
 }
 
 /* Responsive adjustments */
+/* Tablet View */
+@media (max-width: 1024px) {
+    .content {
+        width: 95%;
+        gap: 1.5rem;
+    }
+
+    .item {
+        width: 180px;
+        height: 100px;
+    }
+
+    .span {
+        font-size: 28px;
+    }
+
+    .text {
+        font-size: 13px;
+    }
+}
+
+/* Mobile View */
 @media (max-width: 768px) {
     .content {
         flex-direction: column;
         gap: 1rem;
         width: 90%;
-        margin-top: 100px;
-        margin-left: -40px;
+        margin-top: 50px;
     }
 
     .item {
-        width: 100%; 
-        height: auto; 
+        width: 90%;
+        height: auto;
+        padding: 15px;
     }
 
     .span {
-        font-size: 20px;
+        font-size: 25px;
     }
 
     .text {
@@ -74,3 +96,22 @@
     }
 }
 
+/* Small Mobile View */
+@media (max-width: 480px) {
+    .content {
+        width: 100%;
+    }
+
+    .item {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .span {
+        font-size: 22px;
+    }
+
+    .text {
+        font-size: 11px;
+    }
+}

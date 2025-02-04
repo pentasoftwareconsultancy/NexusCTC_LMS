@@ -17,7 +17,7 @@ import GuestExamPage from './pages/GuestExamPage';
 import GuestExam from './components/guestexam/GuestExam';
 import GallaryPage from './pages/GallaryPage';
 import ImageDetail from './components/gallary/imagedetail/ImageDetail';
-import Footer from './components/footer/Footer';
+// import Footer from './components/footer/Footer';
 import ScrollToTop from './components/Scrolltop';
 import NotLoggedInPage from './pages/NotLoggedInPage'
 
@@ -56,7 +56,7 @@ function App() {
 
       </Routes>
 
-      <Footer/>
+      {/* <Footer/> */}
     </>
   );
 }

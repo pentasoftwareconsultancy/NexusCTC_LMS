@@ -193,7 +193,7 @@
     }
   
     .time {
-      transform: translate(360%, 20%);
+      transform: translate(180%, 20%);
       font-size: 12px;
     }
     .button {

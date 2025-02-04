@@ -22,19 +22,73 @@
     border-bottom-left-radius: 10%;
 }
   
-  /* For mobile devices */
-  @media screen and (max-width: 768px) {
-    .videoshape{
+  /* Tablet View */
+@media (max-width: 1024px) {
+    .video {
+        margin-top: 20%;
+    }
+
+    .videoshape {
+        /* margin-top: -10%;
+        margin-left: 5%; */
         display: none;
     }
-    .videoEmbed{
-        width:62%;
+
+    .videoEmbed {
+        transform: translate(40%, -100%);
+        max-width: 90%;
     }
-    .videoContainer{
-      margin-top: 300px;
-        margin-left: -100px;
-        
+
+    .videoPlayer {
+        width: 120%;
+        border-radius: 10%;
     }
-  }
-  
-  
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .video {
+        margin-top: 5%;
+    }
+
+    .videoshape {
+        margin-top: -5%;
+        margin-left: 2%;
+        width: 90%;
+    }
+
+    .videoEmbed {
+        position: relative;
+        transform: none;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .videoPlayer {
+        width: 100%;
+        border-radius: 8%;
+    }
+}
+
+/* Small Mobile View */
+@media (max-width: 480px) {
+    .video {
+        margin-top: 10%;
+    }
+
+    .videoshape {
+        margin-top: 0;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .videoEmbed {
+        width: 100%;
+        transform: none;
+    }
+
+    .videoPlayer {
+        width: 100%;
+        border-radius: 5%;
+    }
+}

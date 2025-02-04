@@ -165,15 +165,29 @@
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
-  .visionMissionContainer {
-    padding: 20px;
+/* Responsive Design */
+
+/* Tablet Screens */
+@media (max-width: 1024px) {
+  .vissionmissionvalue {
+    margin-top: 10%;
+    height: 180px;
+    width: 180px;
   }
 
-  .visionSection, 
-  .missionSection, 
-  .valueSection {
-    padding: 15px;
+  .Vissionmissionvaluecontent {
+    font-size: 26px;
+  }
+
+  .valueSection,
+  .visionSection,
+  .missionSection {
+    width: 60%;
+  }
+
+  .curveLine {
+    gap: 30px;
+    width: 2%;
   }
 
   .sectionTitle {
@@ -182,5 +196,74 @@
 
   .sectionContent {
     font-size: 16px;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+  .visionMissionContainer {
+    padding: 20px;
+  }
+
+  .vissionmissionvalue {
+    height: 150px;
+    width: 150px;
+    margin-top: 8%;
+  }
+
+  .Vissionmissionvaluecontent {
+    font-size: 22px;
+  }
+
+  .curveLineWrapper {
+    display: none; /* Hide the curve line for mobile for a cleaner layout */
+  }
+
+  .valueSection,
+  .visionSection,
+  .missionSection {
+    width: 80%;
+    padding: 15px;
+  }
+
+  .sectionTitle {
+    font-size: 22px;
+  }
+
+  .sectionContent {
+    font-size: 15px;
+  }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 480px) {
+  .vissionmissionvalue {
+    /* height: 120px;
+    width: 120px; */
+    display: none;
+  }
+
+  .Vissionmissionvaluecontent {
+    font-size: 18px;
+  }
+
+  .valueSection,
+  .visionSection {
+    width: 90%;
+    padding: 10px;
+    margin-left: 20px;
+  }
+  .missionSection{
+    width: 90%;
+    padding: 10px;
+    margin-left: 1px;
+  }
+
+  .sectionTitle {
+    font-size: 20px;
+  }
+
+  .sectionContent {
+    font-size: 14px;
   }
 }

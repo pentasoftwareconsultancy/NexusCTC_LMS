@@ -160,83 +160,116 @@
   border-radius: 10px;
 }
 
-@media screen and (max-width: 768px) {
-
-  /* Ensure that no overflow happens */
-  body {
-    overflow-x: hidden;
-  }
-
-  /* Hero Section */
-  .reasons{
-    display: flex;
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .reasons {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem; /* Add padding for spacing */
-  }
-  .reasons_r{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem; /* Add padding for spacing */
-  }
-  .reasonsImg{
-    width: 200%;
-    margin-left: -50px;
-    margin-top: 50px;
-    z-index: 1;
+    text-align: center;
+    padding: 40px 20px;
   }
 
-  /* Adjust learners container */
+  .reasons_l {
+    width: 90%;
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .reasons_r {
+    width: 100%;
+  }
+
+  .imageContainer {
+    width: 100%;
+  }
+
+  .reasonsImg {
+    width: 70%;
+  }
+
+  .reasonsShape {
+    left: 100%;
+    width: 50%;
+  }
+
   .learners {
-    width: 150%; 
-    height: 80px;
-   margin-left: -112px;
-    font-size: 15px;
-    margin-top: 82px; 
+    width: 60%;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
   }
-  .learners div:nth-child(1)
-  {
-    width: 20%;
-  }
-  .enroll .span{
-    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .reasons {
+    padding: 30px 15px;
+    flex-direction: column;
   }
 
-  .shapeImg, .reasonsshape3 {
+  .reasons_l {
+    width: 90%;
+    text-align: center;
+    margin-top: 30%;
+  }
+
+  .reasons_r {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .imageContainer {
+    width: 200%;
+    max-width: 1000px;
+  }
+
+  .reasonsImg {
+    width: 100%;
+    margin-left: -100px;
+  }
+
+  .shapeImg,
+  .reasonsShape,
+  .reasonsshape3 {
     display: none;
   }
-    .reasonsShape{
-     display: none;
-    }
-    .shapeImg, .reasonsshape3 {
-      display: none;
-    }
-    .reasonsShape{
-       display: none;
-      }
-  .reasons_l
-  {
-    
-    margin-top: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-   width: 90vw;
-   margin-left: -0px;
-  
-  }
-  .content h1 ,.span{
-    font-size:1.75rem;
-  }
-  .content p{
-    text-align: start;
-  }
-  .features ul li{
-    margin-left: -180px;
+
+  .learners {
+    width: 80%;
+    height: 80px;
+    top: 85%;
+    left: 10%;
+    transform: translateX(-50%);
   }
 
+  .span {
+    font-size: 1.8rem;
+  }
+
+  .content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .learners {
+    width: 62%;
+    height: 70px;
+    top: 90%;
+  }
+
+  .span {
+    font-size: 1.5rem;
+  }
+
+  .content p {
+    font-size: 0.85rem;
+  }
+
+  .reasonsImg {
+    width: 65%;
+  }
+
+  .features ul li {
+    margin-left: -60px;
+  }
 }

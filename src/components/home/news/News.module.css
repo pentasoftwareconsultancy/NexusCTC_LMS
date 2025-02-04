@@ -129,9 +129,9 @@ p{
     }
     .content .news_details{
         width: 78%;
-        height: 40%;
+        height: 30%;
         flex-wrap: nowrap;
-        margin-left: 80px;
+        margin-left: 93px;
     }
 
     .shape3{

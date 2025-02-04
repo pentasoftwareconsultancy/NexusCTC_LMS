@@ -213,23 +213,25 @@ textarea:focus::placeholder {
 }
 
 /* Responsive Design */
+/* Responsive Design */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
-    padding-left: 0;
+    padding: 1rem;
   }
-
-  .left,
-  .right {
-    width: 100%;
-    flex: 1 1 auto; /* Allow full width on smaller screens */
+  .left, .right {
+    max-width: 100%;
   }
-
   .NameMob, .EmailCourse {
-    flex-direction: column; /* Stack fields vertically */
+    flex-direction: column;
+    gap: 10px;
   }
-
   .formGroup {
-    width: 100%; /* Full width for smaller screens */
+    flex: 1 1 100%;
+  }
+  .Mapaddress{
+    display: flex;
+    flex-direction:column;
+    margin-right: 10%;
   }
 }

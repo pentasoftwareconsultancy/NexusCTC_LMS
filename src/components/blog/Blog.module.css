@@ -139,49 +139,54 @@
 }
 
 /* Responsive Styles */
-@media (max-width: 1024px) {
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .blogscard {
+    padding: 2rem 5rem;
+  }
   .card {
-    width: calc(33.33% - 20px); /* 3 cards per row on tablets */
+    width: calc(33.33% - 20px);
+  }
+}
+
+@media (max-width: 992px) {
+  .blogscard {
+    padding: 2rem;
+  }
+  .card {
+    width: calc(50% - 20px);
+  }
+  .BlogHeading {
+    font-size: 4rem;
   }
 }
 
 @media (max-width: 768px) {
+  .blogscard {
+    padding: 1rem;
+  }
   .card {
-    width: calc(50% - 20px); /* 2 cards per row on smaller screens */
+    width: calc(100% - 20px);
   }
-  .pagination {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .pageButton {
-    padding: 8px 15px;
-    font-size: 0.9rem;
-  }
-
-  .pageInfo {
-    font-size: 1rem;
+  .BlogHeading {
+    font-size: 3rem;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 480px) {
+  .BlogHeading {
+    font-size: 2.5rem;
+  }
   .card {
-    width: 100%; /* Full width on phones */
+    padding: 15px;
   }
-
-  .cardImage {
-    height: 150px;
-  }
-
-  .cardName {
-    font-size: 1.2rem;
-  }
-
-  .cardCourse {
-    font-size: 1rem;
-  }
-
   .cardButton {
     font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+  .pageButton {
+    font-size: 0.9rem;
+    padding: 8px 15px;
   }
 }
+

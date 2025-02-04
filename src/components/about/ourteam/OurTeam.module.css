@@ -66,79 +66,88 @@
 
 /* Media Queries for responsiveness */
 
-/* For larger devices (desktops, laptops) */
-@media (max-width: 1200px) {
-  .sectionTitle {
-      font-size: 2.2rem; /* Adjust font size for larger tablets and small desktops */
+/* Responsive Design */
+
+/* Tablet Screens */
+@media (max-width: 1024px) {
+  .ourTeamSection {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .teamGrid {
+    gap: 1.5rem;
   }
 
   .teamMemberCard {
-      width: 280px; /* Slightly reduce width */
+    width: 280px;
+    padding: 0.8rem;
+  }
+
+  .memberImage {
+    height: 280px;
+  }
+
+  .sectionTitle {
+    font-size: 2.2rem;
+  }
+
+  .memberName {
+    font-size: 1.4rem;
   }
 }
 
-/* For tablets and smaller desktops */
+/* Mobile Screens */
 @media (max-width: 768px) {
-  .sectionTitle {
-      font-size: 2rem; /* Adjust font size for tablets */
-      margin-bottom: 1rem; /* Reduced margin for better space utilization */
+  .ourTeamSection {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .teamGrid {
-      gap: 1.5rem;
+    flex-direction: column;
+    align-items: center;
   }
 
   .teamMemberCard {
-      width: 100%; /* Cards take up full width on smaller screens */
-      max-width: 350px; /* Limit max width to keep cards consistent */
-      margin-bottom: 1.5rem;
+    width: 90%;
+    max-width: 350px;
   }
 
   .memberImage {
-      height: 250px; /* Adjust height for smaller screens */
+    height: 260px;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .memberName {
+    font-size: 1.3rem;
   }
 }
 
-/* For small screens (mobile phones) */
+/* Small Mobile Screens */
 @media (max-width: 480px) {
-  .sectionTitle {
-      font-size: 1.8rem; /* Adjust font size for mobile */
-      margin-bottom: 1rem;
-  }
-
-  .teamGrid {
-      gap: 1rem; /* Reduced gap on small screens */
+  .ourTeamSection {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .teamMemberCard {
-      width: 100%; /* Full width for mobile */
-      margin-bottom: 1rem;
+    width: 95%;
+    padding: 0.7rem;
   }
 
   .memberImage {
-      height: 200px; /* Smaller image height for mobile */
+    height: 240px;
   }
 
-  .memberName {
-      font-size: 1.2rem; /* Adjust name size for mobile */
-  }
-}
-
-/* For extra small screens (very small mobile devices) */
-@media (max-width: 375px) {
   .sectionTitle {
-      font-size: 1.6rem; /* Smaller title for very small screens */
-  }
-
-  .teamMemberCard {
-      width: 100%; /* Ensure cards take full width */
-  }
-
-  .memberImage {
-      height: 180px; /* Further reduce image height */
+    font-size: 1.8rem;
   }
 
   .memberName {
-      font-size: 1rem; /* Further reduce name font size */
+    font-size: 1.2rem;
   }
 }

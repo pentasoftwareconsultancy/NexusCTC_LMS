@@ -111,42 +111,46 @@
 
 /* Responsive Design */
 
-/* For medium screens (tablets) */
-@media (max-width: 1024px) {
-    .gallery-item {
-        width: 40%; /* Adjust width to fit better on tablets */
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .gallery-container {
+        padding: 2rem 5rem;
     }
 }
 
-/* For smaller screens (phones) */
+@media (max-width: 992px) {
+    .gallery-container {
+        padding: 2rem;
+    }
+    .Circle {
+        width: 200px;
+        height: 200px;
+    }
+}
+
 @media (max-width: 768px) {
-    .gallery-item {
-        width: 45%; /* Adjust width for smaller devices */
+    .gallery-container {
+        padding: 1rem;
     }
-
     .Circle {
-        width: 150px; /* Reduce circle size for smaller screens */
-        height: 150px; /* Reduce circle size for smaller screens */
+        width: 180px;
+        height: 180px;
     }
-
     .CollegeName {
-        font-size: 16px; /* Adjust font size */
+        font-size: 16px;
     }
 }
 
-/* For mobile screens (below 480px) */
 @media (max-width: 480px) {
-    .gallery-item {
-        width: 90%; /* Take up most of the screen width on mobile */
-        margin-bottom: 30px; /* Reduce bottom margin for mobile */
+    .gallery-container {
+        padding: 0.5rem;
     }
-
     .Circle {
-        width: 120px; /* Smaller circle size for mobile */
-        height: 120px; /* Smaller circle size for mobile */
+        width: 150px;
+        height: 150px;
     }
-
     .CollegeName {
-        font-size: 14px; /* Smaller font size */
+        font-size: 14px;
     }
 }

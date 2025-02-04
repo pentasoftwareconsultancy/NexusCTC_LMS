@@ -85,32 +85,86 @@
 }
 
 /* Responsive Design */
+/* Responsive Design */
+
 @media (max-width: 1200px) {
+  .ourPartnersContainer {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .OurPartnerHeading {
+    font-size: 2rem;
+  }
+
+  .row {
+    gap: 15px;
+  }
+
   .partner {
-    width: 120px; /* Smaller images for medium screens */
+    width: 130px;
+    height: 90px;
+  }
+}
+
+@media (max-width: 992px) {
+  .ourPartnersContainer {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .OurPartnerHeading {
+    font-size: 1.8rem;
+  }
+
+  .row {
+    gap: 10px;
+  }
+
+  .partner {
+    width: 120px;
     height: 80px;
   }
 }
 
 @media (max-width: 768px) {
+  .ourPartnersContainer {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+  }
+
+  .OurPartnerHeading {
+    font-size: 1.5rem;
+  }
+
+  .row {
+    gap: 5px;
+  }
+
   .partner {
-    width: 100px; /* Smaller images for tablets */
+    width: 110px;
     height: 70px;
   }
 }
 
-@media (max-width: 480px) {
-  .partner {
-    width: 80px; /* Even smaller images for mobile screens */
-    height: 60px;
-  }
-
-  .row {
-    gap: 10px; /* Reduce gap between items on mobile */
+@media (max-width: 576px) {
+  .ourPartnersContainer {
+    margin-left: 5px;
+    margin-right: 5px;
   }
 
   .OurPartnerHeading {
-    font-size: 1.8rem; /* Smaller heading for mobile */
-    margin-bottom: 20px;
+    font-size: 1.2rem;
+  }
+
+  .row {
+    gap: 5px;
+    flex-direction: column; /* Stack the items vertically on small screens */
+  }
+
+  .partner {
+    width: 100%;
+    height: 60px;
   }
 }

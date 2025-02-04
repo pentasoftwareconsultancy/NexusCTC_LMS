@@ -7,10 +7,15 @@ import { MdPhone } from "react-icons/md";
 function LoginPage() {
   const [userId, setUserId] = useState('');
   const [password, setPassword] = useState('');
-  const [role, setRole] = useState('student'); // Default to 'student'
-  const [teacherPassword, setTeacherPassword] = useState(''); // Teacher password
+  const [role, setRole] = useState('student'); // Default role
   const navigate = useNavigate();
   const location = useLocation();
+
+  // Predefined credentials
+  const users = {
+    student: { userId: 'student', password: 'student123' },
+    teacher: { userId: 'teacher', password: 'teacher123' }
+  };
 
   useEffect(() => {
     if (localStorage.getItem('isLoggedIn') === 'true') {
@@ -21,12 +26,11 @@ function LoginPage() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (role === 'student' && userId === 'student' && password === 'student123') {
+
+    // Validate login based on selected role
+    if (userId === users[role].userId && password === users[role].password) {
       localStorage.setItem('isLoggedIn', 'true');
-      const redirectTo = location.state?.from || '/';
-      navigate(redirectTo);
-    } else if (role === 'teacher' && userId === 'teacher' && teacherPassword === 'teacher123') {
-      localStorage.setItem('isLoggedIn', 'true');
+      localStorage.setItem('userRole', role); // Store user role for further access control
       const redirectTo = location.state?.from || '/';
       navigate(redirectTo);
     } else {
@@ -73,7 +77,6 @@ function LoginPage() {
           </button>
         </div>
 
-
         <form onSubmit={handleLogin} className={styles.loginForm}>
           <input
             type="text"
@@ -92,17 +95,6 @@ function LoginPage() {
             className={styles.inputField}
           />
 
-          {role === 'teacher' && (
-            <input
-              type="password"
-              placeholder="Teacher Password"
-              value={teacherPassword}
-              onChange={(e) => setTeacherPassword(e.target.value)}
-              required
-              className={styles.inputField}
-            />
-          )}
-
           <button type="submit" className={styles.loginButton}>Login</button>
         </form>
 
@@ -119,7 +111,7 @@ function LoginPage() {
             <FcGoogle className={styles.icon} /> Login with Google
           </button>
           <button onClick={handlePhoneLogin} className={styles.phoneButton}>
-            < MdPhone className={styles.icon} /> Login with Phone
+            <MdPhone className={styles.icon} /> Login with Phone
           </button>
         </div>
       </div>

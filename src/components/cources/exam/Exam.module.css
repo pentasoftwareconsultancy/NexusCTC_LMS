@@ -118,9 +118,120 @@
     max-width: 90%;  /* Optional: Make the popup responsive */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Optional: Add shadow for better visibility */
   }
-  
+
+  .Exambutton{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  .startExamButton{
+      background-color: orange;
+      
+  }
+  .closeExamButton{
+    background-color: orange;
+  }
+
   input {
     margin: 10px 0;
     padding: 8px;
     width: 100%;
   }
+
+  /* ===================== RESPONSIVENESS ===================== */
+
+/* For tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .examContainer {
+    padding: 15px;
+  }
+
+  .toggleButton {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .contentBox {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  .course_image {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .ExamButton {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+}
+
+/* For mobile screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .examContainer {
+    padding: 12px;
+  }
+
+  .toggleButton {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+
+  .contentBox {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .course_image {
+    width: 70px;
+    height: 70px;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  .ExamButton {
+    font-size: 0.85rem;
+    padding: 5px 8px;
+  }
+}
+
+/* For extra-small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .examContainer {
+    padding: 10px;
+  }
+
+  .toggleButton {
+    font-size: 0.8rem;
+    padding: 5px 8px;
+  }
+
+  .contentBox {
+    padding: 8px;
+  }
+
+  .course_image {
+    width: 60px;
+    height: 60px;
+  }
+
+  h2 {
+    font-size: 0.9rem;
+  }
+
+  .ExamButton {
+    font-size: 0.8rem;
+    padding: 4px 6px;
+  }
+}

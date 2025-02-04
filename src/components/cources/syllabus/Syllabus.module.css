@@ -69,3 +69,79 @@ li {
   font-weight: bold;
  
 }
+
+/* ===================== RESPONSIVENESS ===================== */
+
+/* For tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .content {
+    width: 80%;
+    margin-left: 10px;
+    padding: 15px;
+  }
+
+  ul {
+    margin-left: 10%;
+    padding-left: 15px;
+  }
+
+  .toggleButton {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .plusSign {
+    font-size: 18px;
+  }
+}
+
+/* For mobile screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .content {
+    width: 100%;
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  ul {
+    margin-left: 5%;
+    padding-left: 10px;
+  }
+
+  li {
+    font-size: 14px;
+  }
+
+  .toggleButton {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .plusSign {
+    font-size: 16px;
+  }
+
+  .moduleContainer {
+    margin-bottom: 5px;
+  }
+}
+
+/* For extra-small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .toggleButton {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .plusSign {
+    font-size: 14px;
+  }
+
+  ul {
+    margin-left: 5%;
+  }
+
+  li {
+    font-size: 13px;
+  }
+}

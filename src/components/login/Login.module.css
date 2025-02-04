@@ -21,7 +21,14 @@
 
 .roleSelection{
   display: flex;
+  text-align: center;
+  justify-content: center;
   gap: 20px;
+  margin-bottom: 20px;
+}
+.roleButton{
+  background-color: #f5e0bc;
+  color: rgb(247, 115, 6);
 }
 
 .loginBox {

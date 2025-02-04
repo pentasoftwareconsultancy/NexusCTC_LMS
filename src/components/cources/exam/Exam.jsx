@@ -74,6 +74,8 @@ function Exams({ exams }) {
                             onChange={(e) => setStudentId(e.target.value)}
                             required
                           />
+
+                          <div className={styles.Exambutton}>
                           <button
                             onClick={handleStartExam}
                             className={styles.startExamButton}
@@ -82,10 +84,11 @@ function Exams({ exams }) {
                           </button>
                           <button
                             onClick={() => setShowPopup(false)}
-                            className={styles.closeButton}
+                            className={styles.closeExamButton}
                           >
                             Close
                           </button>
+                          </div>
                         </div>
                       </div>
                     )}

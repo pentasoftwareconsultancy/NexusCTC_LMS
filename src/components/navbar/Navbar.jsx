@@ -50,7 +50,7 @@ const Navbar = ({ loggedIn, setLoggedIn }) => {
                             )}
                         </li>
                     ) : (
-                        <li><Link to="/login" className={styles.navbarLink}>Login</Link></li>
+                        <li className={styles.navbarItem}><Link to="/login" className={styles.navbarLink}>Login</Link></li>
                     )}
                 </ul>
             </nav>

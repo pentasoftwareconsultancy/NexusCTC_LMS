@@ -51,15 +51,10 @@
 .reasonsShape {
   position: absolute;
   top: 30%;
-  /* Adjust this to position it correctly */
   left: 110%;
-  /* Adjust this to center it */
   transform: translate(-50%, -50%);
-  /* To center the image */
   width: 60%;
-  /* Or adjust based on your design */
   z-index: 1;
-  /* Ensures this image is on top */
 }
 
 /* Left side container (you can add content here) */
@@ -161,11 +156,12 @@
 }
 
 /* Responsive Design */
+
 @media (max-width: 1024px) {
   .reasons {
     flex-direction: column;
-    text-align: center;
-    padding: 40px 20px;
+    align-items: center;
+    padding: 40px;
   }
 
   .reasons_l {
@@ -175,101 +171,111 @@
   }
 
   .reasons_r {
-    width: 100%;
+    width: 90%;
   }
 
   .imageContainer {
     width: 100%;
   }
 
-  .reasonsImg {
-    width: 70%;
-  }
-
-  .reasonsShape {
-    left: 100%;
-    width: 50%;
-  }
-
   .learners {
-    width: 60%;
-    top: 80%;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 50%;
+    height: 90px;
+    top: 75%;
+    left: 25%;
   }
+  .shapeImg{
+    width: 80%;
+  }
+
+  .learners div:nth-child(1){
+    background-color: rgb(254, 217, 217);
+    border-radius: 50px;
+    padding: 5px;
+    color: rgb(218, 62, 62);
+  }
+
 }
 
 @media (max-width: 768px) {
   .reasons {
-    padding: 30px 15px;
-    flex-direction: column;
+    padding: 30px;
   }
 
   .reasons_l {
-    width: 90%;
-    text-align: center;
-    margin-top: 30%;
+    width: 100%;
   }
 
   .reasons_r {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    text-align: center;
   }
 
   .imageContainer {
-    width: 200%;
-    max-width: 1000px;
+    width: 100%;
   }
 
   .reasonsImg {
-    width: 100%;
-    margin-left: -100px;
+    width: 80%;
+    top: 55%;
+    left: 50%;
   }
 
-  .shapeImg,
-  .reasonsShape,
-  .reasonsshape3 {
-    display: none;
+  .reasonsShape {
+    width: 50%;
+    top: 35%;
+    left: 50%;
   }
 
   .learners {
-    width: 80%;
+    width: 60%;
     height: 80px;
-    top: 85%;
-    left: 10%;
-    transform: translateX(-50%);
-  }
-
-  .span {
-    font-size: 1.8rem;
-  }
-
-  .content p {
-    font-size: 0.9rem;
+    top: 80%;
+    left: 20%;
   }
 }
 
 @media (max-width: 480px) {
-  .learners {
-    width: 62%;
-    height: 70px;
-    top: 90%;
+  .reasons {
+    padding: 20px;
   }
 
-  .span {
-    font-size: 1.5rem;
+  .reasons_l {
+    width: 100%;
+    text-align: center;
   }
 
-  .content p {
-    font-size: 0.85rem;
+  .reasons_r {
+    width: 100%;
+  }
+
+  .imageContainer {
+    width: 100%;
   }
 
   .reasonsImg {
-    width: 65%;
+    width: 75%;
+    top: 50%;
+    left: 50%;
   }
 
-  .features ul li {
-    margin-left: -60px;
+  .reasonsShape {
+    /* width: 45%;
+    top: 30%;
+    left: 50%; */
+    display: none;
+  }
+
+  .learners {
+    width: 60%;
+    height: 70px;
+    top: 60%;
+    left: 10%;
+    font-size: 14px;
+  }
+
+  .span {
+    font-size: 1rem;
+    font-weight: bold;
   }
 }

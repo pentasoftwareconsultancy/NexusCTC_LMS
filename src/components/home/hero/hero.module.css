@@ -225,33 +225,58 @@ body{
 
 @media (max-width: 360px) {
     .hero {
+        flex-direction: column;
+        text-align: center;
         padding: 20px 10px;
+        gap: 1.5rem;
     }
 
     .hero_l {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+        padding: 0 5px;
+        margin: 0 auto;
     }
 
     .hero_text {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
+        line-height: 1.4;
+        margin-top: 5px;
     }
 
     .btn_has_before {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
         width: 100%;
+        padding: 12px 0;
+        text-align: center;
     }
 
     .image_container {
-        max-width: 250px;
+        width: 100%;
+        max-width: 260px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .img1, .img2 {
+        max-width: 60%;
+        position: absolute;
+        transform: translate(-50%, -50%);
     }
 
     .img1 {
-        top: 50%;
+        top: 40%;
         left: 50%;
+        border-bottom-left-radius: 50%;
+        border-top-right-radius: 30%;
     }
 
     .img2 {
-        top: 60%;
-        left: 70%;
+        top: 65%;
+        left: 55%;
+        border-top-left-radius: 20%;
+        border-bottom-right-radius: 40%;
     }
 }
